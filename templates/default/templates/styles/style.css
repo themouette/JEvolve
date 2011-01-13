@@ -84,6 +84,24 @@ html,body{
     height:auto;
 }
 
+.ui-layout-pane{
+	border:none;
+	padding:0;
+	background:transparent;}
+#searchbar{border-bottom:1px solid #b4b4b4;}
+#search{
+	display:block;
+	width:100%;
+	border-width:0;
+	height:30px;
+	background: url('../images/magnifier.png') 1px center no-repeat #fff; 
+	padding: 0 0 0 18px;}
+#tabs .ui-tabs-panel{border-width:0;padding:1em 0;}
+#tabs li .ui-icon-close{float:left;margin: 0.4em 0.2em 0 0;}
+
+#menu a.jstree-search{color:#000;}
+
+
 /** Page/Content Markup **/
 div.page_content {
     padding: 0px 20px 0px 20px;

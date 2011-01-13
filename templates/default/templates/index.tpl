@@ -11,8 +11,9 @@
         
     	<link rel="stylesheet" type="text/css" href="styles/phpdoc.css"></link>
     	<link rel="stylesheet" type="text/css" href="styles/jquery.treeview.css"></link>
-    	<link rel="stylesheet" type="text/css" href="styles/style.css"></link>
+    	<link rel="stylesheet" type="text/css" href="styles/jquery.layout.css"></link>
       <link rel="stylesheet" type="text/css" href="styles/aristo/jquery-ui.css"></link>
+    	<link rel="stylesheet" type="text/css" href="styles/style.css"></link>
         
 
       <script type="text/javascript" src="scripts/jquery.js" type="text/javascript"></script>
@@ -20,7 +21,7 @@
       <script type="text/javascript" src="scripts/jquery.query.js" type="text/javascript"></script>
       <script type="text/javascript" src="scripts/jquery.jstree.js" type="text/javascript"></script>
       <script type="text/javascript" src="scripts/jquery-ui.js" type="text/javascript"></script>
-      <script type="text/javascript" src="scripts/jquery.layout.js" type="text/javascript"></script>
+      <script type="text/javascript" src="scripts/jquery.layout.min.js" type="text/javascript"></script>
         
       <script type="text/javascript" src="scripts/common.js" type="text/javascript"></script>
     </head>
@@ -33,32 +34,46 @@
             </div>
         </div>
     
-        <table id='layout' style='width:100%;'>
-            <tr>
-                <!-- ============ LEFT COLUMN (MENU) ============== -->
-                <td id='left' valign='top'><div id='menu'></div></td>
-                <!-- ============ RIGHT COLUMN (CONTENT) ============== -->
-                <td valign='top' width='100%'>
-					<div id='tabs'>
-						
-						<ul>
-							<li><a href="#tabs-1">Home</a></li>
+            <!-- ============ LEFT COLUMN (MENU) ============== -->
+            <div class="ui-layout-west" id="left">
 
-						</ul>
-						<div id="tabs-1">
-							{include file="welcome.tpl"}
-						</div>
+              <div id="searchbar" class="ui-layout-north">
 
-						
-						</div>
-                </td>
-            </tr>
+                <input type="text" name="search" value="" id="search">
+
+              </div>
+
+              <div id='menu' class="ui-layout-center"></div>
+
+            </div> <!-- end of layout-west -->
+            
+            <!-- ============ RIGHT COLUMN (CONTENT) ============== -->
+            <div class="ui-layout-center" id="main">
+
+              <div id="tabs">
+
+                <ul>
+                  <li><a href="#tabs-1">Home</a></li>
+                </ul>
+
+                <div id="tabs-1">
+
+                  {include file="welcome.tpl"}
+
+                </div>
+
+              </div>
+
+            </div> <!-- end of layout-center -->
+
             <!-- ============ FOOTER SECTION ============== -->
-            <tr>
-                <td id='footer' colspan="2">
-                    Copyright© 2010 <a href='http://onigoetz.ch' target='_blank'>Onigoetz.ch</a> - Based on <a href='http://evolve.crazytje.be' target='_blank'>Evolve </a>
-                </td>
-            </tr>
-        </table>
+            <div id="footer" class="ui-layout-south">
+              
+                Copyright© 2010 <a href='http://www.carpe-hora.com' target='_blank'>Carpe Hora</a> 
+                - Based on <a href='http://onigoetz.ch' target='_blank'>Onigoetz.ch</a> 
+                  and <a href='http://evolve.crazytje.be' target='_blank'>Evolve </a>
+
+            </div> <!-- end of layout-south -->
+
     </body>
 <html>

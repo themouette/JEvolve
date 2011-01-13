@@ -16,7 +16,63 @@ $(document).ready(function() {
 	});
 
     loadMenu();
+
+	$('body').layout({
+		applyDefaultStyles: true,
+		west: {
+			resizable:		true,
+			size:					250,
+			onresize_end: resizeLeft},
+		south: {
+			resizable:		false,
+			size:					31,
+			spacing_open: 0,
+			slidable:     false}});
+	$('#left').layout({
+		north: {
+			resizable:		false,
+			spacing_open: 0,
+			size:					30,
+			slidable:			false}});
+	
+	
+		resizeSearch()
+
+		$("#search").keyup(function(){
+			searchFor($(this).val())
+		});
+		searchFor($("#search").val());
+
 });
+
+function resizeSearch(){
+	$('#search').width($('#left').innerWidth() - 18);
+}
+
+function resizeLeft() {
+	resizeSearch();
+	$('#left').layout('resizeAll')
+}
+
+function searchFor(search) {
+	if(search && search.length)
+	{
+		$("#menu")
+			.jstree('search', search)
+			.find('li:not(:has(.jstree-search))')
+				.css('display', 'none')
+			.end()
+			.find('li:has(.jstree-search)')
+				.css('display', 'block')
+			.end();
+	}
+	else
+	{
+		$("#menu")
+			.find('.jstree-search')
+			.removeClass('jstree-search');
+	}
+}
 
 /** Loads the menu in the sidebar **/
 function loadMenu() {
@@ -24,7 +80,7 @@ function loadMenu() {
         function(pResponse) {  
             $("#menu").jstree({
 				"core" : { 'animation':0},
-                "plugins" : [ "html_data", "ui", "themes", "cookies"],
+                "plugins" : [ "html_data", "ui", "themes", "cookies", "search"],
                 "cookies" : {
                     "save_opened" : "evolved_tree",
                     "save_selected" : "evolved_selected",
@@ -37,7 +93,11 @@ function loadMenu() {
                 },
                 "html_data" : {
                     "data" : pResponse
-                }
+                },
+								"search": {
+									"case_insensitive" : true,
+									"ajax": false
+								}
             });
             ShowLoading(false);
             AttachLinkEvents();
@@ -84,6 +144,7 @@ function ShowPage(pUrl) {
     if(anchor) {
         document.location.hash = anchor;
     }
+	$tabs.tabs('select', $tabs.tabs('length') - 1 );
 }
 
 /** Attach the onclick events to all links that have rel=contents **/
