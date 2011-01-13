@@ -88,7 +88,10 @@ html,body{
 	border:none;
 	padding:0;
 	background:transparent;}
-#searchbar{border-bottom:1px solid #b4b4b4;}
+#searchbar{
+  border-bottom:1px solid #b4b4b4;
+  overflow: hidden;
+}
 #search{
 	display:block;
 	width:100%;
