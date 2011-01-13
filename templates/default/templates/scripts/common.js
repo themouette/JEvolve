@@ -70,7 +70,11 @@ function searchFor(search) {
 	{
 		$("#menu")
 			.find('.jstree-search')
-			.removeClass('jstree-search');
+				.removeClass('jstree-search')
+			.end()
+			.find('li.jstree-last')
+				.css('display', null)
+			.end();
 	}
 }
 
