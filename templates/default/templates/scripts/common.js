@@ -6,7 +6,13 @@ $(document).ready(function() {
 
 	$tabs = $("#tabs").tabs({
 		tabTemplate: '<li><a href="#{href}">#{label}</a> <span class="ui-icon ui-icon-close">Remove Tab</span></li>',
-		load: function(event, ui) { AttachLinkEvents(); }
+		load: function(event, ui) { AttachLinkEvents(); },
+		add: function (event, ui) { $tabs.tabs('select', '#' + ui.panel.id); },
+		ajaxOptions: {
+			error: function( xhr, status, index, anchor ) {
+				$( anchor.hash ).html("Couldn't load this tab. We'll try to fix this as soon as possible. ");
+				}
+			}
 		
 	});
 	
@@ -38,9 +44,13 @@ $(document).ready(function() {
 	
 		resizeSearch()
 
-		$("#search").keyup(function(){
-			searchFor($(this).val())
-		});
+		$("#search").autocomplete({
+			minLength: 0,
+			delay:300,
+			search: function(event, ui){
+				searchFor(this.value)
+				return false;
+			}});
 		searchFor($("#search").val());
 
 });
