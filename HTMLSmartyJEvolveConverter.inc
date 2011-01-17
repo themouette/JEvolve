@@ -337,7 +337,7 @@ class HTMLSmartyJEvolveConverter extends HTMLSmartyConverter {
         }
         return $ret;
     }
-    
+    /*
     function getTutorialTree($tutorial,$k = false)
     {
         $ret = '';
@@ -379,6 +379,7 @@ class HTMLSmartyJEvolveConverter extends HTMLSmartyConverter {
         $ret = $template->fetch('tutorial_tree.tpl');
 				return $ret;
     }
+    */
     
     /**
      * HTMLdefaultConverter chooses to format both package indexes and the complete index here
@@ -925,6 +926,12 @@ class HTMLSmartyJEvolveConverter extends HTMLSmartyConverter {
      * @param parserTutorial
      */
     function convertTutorial(&$element) {
+    /*
+      THIS WAS THE Evolve function
+      Due to HTMLSmartyConverter way of returning data,
+      we have to rewrite whole function.
+      This piece of code is here to keep track while refactoring.
+
         phpDocumentor_out("\n");
         flush();
         $template = &parent::convertTutorial($element);
@@ -936,6 +943,63 @@ class HTMLSmartyJEvolveConverter extends HTMLSmartyConverter {
         flush();
         $this->setTargetDir($this->base_dir . PATH_DELIMITER . $element->package . $a);
         $this->writeFile('tutorial_'.$element->name.'.html',$contents);
+*/
+        phpDocumentor_out("\n");
+        flush();
+
+        $this->package = $element->package;
+        $this->subpackage = $element->subpackage;
+        $content = $element->Convert($this);
+        $template = &$this->newSmarty();
+        $template->assign('contents',$content);
+        $template->assign('title',$element->getTitle($this));
+        $template->assign('nav',$element->parent || $element->prev || $element->next);
+        if ($element->parent)
+        {
+            $template->assign('up',$this->getId($element->parent));
+            $template->assign('uptitle',$element->parent->title);
+        }
+        if ($element->prev)
+        {
+            $template->assign('prev',$this->getId($element->prev));
+            $template->assign('prevtitle',$element->prev->title);
+        }
+        if ($element->next)
+        {
+            $template->assign('next',$this->getId($element->next));
+            $template->assign('nexttitle',$element->next->title);
+        }
+
+        $classleft = $this->getClassLeft();
+        $template->assign("compiledfileindex",$this->getPageLeft());
+        $template->assign("compiledclassindex",$classleft['class']);
+        $template->assign("compiledinterfaceindex",$classleft['interface']);
+        $template->assign("tutorials",$this->getTutorialList());
+        $template->assign("title",strip_tags($element->getTitle($this)));
+        $contents = $element->Convert($this);
+        if ($element->name == $this->package . '.pkg')
+        {
+            $this->package_pages[$element->package] = $contents;
+        }
+        $a = '../';
+        if (!empty($element->subpackage)) $a .= $a;
+        $template->assign("subdir",$a);
+        $a = '';
+        if ($element->subpackage) $a = PATH_DELIMITER . $element->subpackage;
+        $template->register_outputfilter('HTMLSmarty_outputfilter');
+        $template->register_outputfilter('HTMLSmartyJEvolve_outputfilter');
+        $this->setTargetDir($this->base_dir . PATH_DELIMITER . $element->package . $a);
+        $this->writeFile('tutorial_'.$element->name.'.html',$template->fetch('tutorial.tpl'));
+        if ($element->name == $element->package . '.pkg')
+        {
+            phpDocumentor_out("\n");
+            flush();
+            // package-level docs
+            $this->setTargetDir($this->base_dir);
+            $template->assign("subdir",'');
+            $this->writeFile('li_'.$element->package.'.html',$template->fetch('tutorial.tpl'));
+        }
+        unset($template);
     }
     
     /**
