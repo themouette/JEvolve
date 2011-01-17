@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:51:19
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:23:31
          compiled from errors.tpl */ ?>
 <div class='page_content'>
     <?php if (isset($this->_sections['files'])) unset($this->_sections['files']);

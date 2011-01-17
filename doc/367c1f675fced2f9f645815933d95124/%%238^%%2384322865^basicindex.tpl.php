@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:46:01
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:18:06
          compiled from basicindex.tpl */ ?>
 <div class="index-letter-menu">
 <?php if (isset($this->_sections['letter'])) unset($this->_sections['letter']);

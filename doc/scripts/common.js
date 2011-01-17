@@ -129,12 +129,16 @@ function loadMenu() {
 /** Gets the content of a page **/
 function GetPage(pUrl, pSuccessCallBack, pErrorCallBack){
     $.ajax({
-            type: "POST",
+            type: "GET",
             url: pUrl,
             dataType: 'html',
             async: true,
             error: function (){
-                new pErrorCallBack();
+                $('<div class="error" title="error" ><p>Unable to load '+pUrl+'</p></div>')
+                  .dialog({
+                    modal: true
+                    })
+                  .css('z-index', 20001);
             },
             success: function (response) {
                 new pSuccessCallBack(response);

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:46:02
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:18:08
          compiled from page.tpl */ ?>
 <div class='page_content'>
     <h2 class="file-name"><img src="<?php echo $this->_tpl_vars['subdir']; ?>

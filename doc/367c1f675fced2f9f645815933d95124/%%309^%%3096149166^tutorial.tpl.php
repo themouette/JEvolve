@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:43:59
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:17:53
          compiled from tutorial.tpl */ ?>
 <div class='page_content'>
     <?php if ($this->_tpl_vars['nav']): ?>

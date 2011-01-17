@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:46:02
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:18:08
          compiled from docblock.tpl */ ?>
 <!-- ========== Info from phpDoc block ========= -->
 <?php if ($this->_tpl_vars['sdesc']): ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:46:02
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:18:07
          compiled from blank.tpl */ ?>
 <div class='page_content'>
 <div align="center"><h1><?php echo $this->_tpl_vars['maintitle']; ?>

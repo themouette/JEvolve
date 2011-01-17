@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.0, created on 2011-01-17 14:45:49
+<?php /* Smarty version 2.6.0, created on 2011-01-17 16:17:55
          compiled from tutorial_toc.tpl */ ?>
 <?php require_once(SMARTY_DIR . 'core' . DIRECTORY_SEPARATOR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'assign', 'tutorial_toc.tpl', 4, false),)), $this); ?>
