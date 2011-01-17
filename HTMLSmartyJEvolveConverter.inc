@@ -12,7 +12,7 @@
  *
  * </p>
  * @project JEvolve
- * @package Converter
+ * @package Converters
  */
 class HTMLSmartyJEvolveConverter extends HTMLSmartyConverter {
     /** @var string */
