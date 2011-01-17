@@ -1,0 +1,346 @@
+<div class='page_content'>
+        <a href="#Post-parsing">Post-parsing</a><br>
+        <a href="#AllTests.php">AllTests.php</a><br>
+        <a href="#Beautifier.php">Beautifier.php</a><br>
+        <a href="#bug-541886.php">bug-541886.php</a><br>
+        <a href="#bug-542586.php">bug-542586.php</a><br>
+        <a href="#bug-553560.php">bug-553560.php</a><br>
+        <a href="#bug-555768.php">bug-555768.php</a><br>
+        <a href="#bug-556031-01.php">bug-556031-01.php</a><br>
+        <a href="#bug-558031.php">bug-558031.php</a><br>
+        <a href="#bug-558051.php">bug-558051.php</a><br>
+        <a href="#bug-561101.php">bug-561101.php</a><br>
+        <a href="#bug-566600.php">bug-566600.php</a><br>
+        <a href="#bug-567059.php">bug-567059.php</a><br>
+        <a href="#bug-587733.php">bug-587733.php</a><br>
+        <a href="#bug-772441.php">bug-772441.php</a><br>
+        <a href="#bug-loseunknowntags.php">bug-loseunknowntags.php</a><br>
+        <a href="#common.inc.php">common.inc.php</a><br>
+        <a href="#Converter.inc">Converter.inc</a><br>
+        <a href="#core.rm_auto.php">core.rm_auto.php</a><br>
+        <a href="#create_package.xml.php">create_package.xml.php</a><br>
+        <a href="#DocBlockTags.inc">DocBlockTags.inc</a><br>
+        <a href="#file_dialog.php">file_dialog.php</a><br>
+        <a href="#find_phpdoc.php">find_phpdoc.php</a><br>
+        <a href="#HighlightParser.inc">HighlightParser.inc</a><br>
+        <a href="#HighlightParserTests.php">HighlightParserTests.php</a><br>
+        <a href="#HTMLSmartyJEvolveConverter.inc">HTMLSmartyJEvolveConverter.inc</a><br>
+        <a href="#InlineTags.inc">InlineTags.inc</a><br>
+        <a href="#IntermediateParserTests.php">IntermediateParserTests.php</a><br>
+        <a href="#Io.inc">Io.inc</a><br>
+        <a href="#LinkClasses.inc">LinkClasses.inc</a><br>
+        <a href="#Parser.inc">Parser.inc</a><br>
+        <a href="#ParserClassTests.php">ParserClassTests.php</a><br>
+        <a href="#ParserData.inc">ParserData.inc</a><br>
+        <a href="#ParserDescCleanup.inc">ParserDescCleanup.inc</a><br>
+        <a href="#ParserDocBlock.inc">ParserDocBlock.inc</a><br>
+        <a href="#ParserElements.inc">ParserElements.inc</a><br>
+        <a href="#ParserPageGetSourceLocationTests.php">ParserPageGetSourceLocationTests.php</a><br>
+        <a href="#ParserPageTests.php">ParserPageTests.php</a><br>
+        <a href="#PDFdefaultConverter.inc">PDFdefaultConverter.inc</a><br>
+        <a href="#phpdoc.php">phpdoc.php</a><br>
+        <a href="#phpDocumentorSetupTests.php">phpDocumentorSetupTests.php</a><br>
+        <a href="#phpDocumentorTParserTests.php">phpDocumentorTParserTests.php</a><br>
+        <a href="#phpDocumentorTWordParser.inc">phpDocumentorTWordParser.inc</a><br>
+        <a href="#Publisher.inc">Publisher.inc</a><br>
+        <a href="#Setup.inc.php">Setup.inc.php</a><br>
+        <a href="#top.php">top.php</a><br>
+        <a href="#TutorialHighlightParser.inc">TutorialHighlightParser.inc</a><br>
+        <a href="#utilities.php">utilities.php</a><br>
+            <a name="Post-parsing"></a>
+    <h1>Post-parsing</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserPageTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - Class tests_ParserClassGetSourceLocationTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - Class tests_phpDocumentorSetupCleanConverterNamePieceTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserPageGetSourceLocationTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - Class tests_phpDocumentorSetupDecideOnOrOffTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - Class tests_phpDocumentorTParserGetInlineTagsTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupDecideOnOrOffTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorTParserGetInlineTagsTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorTParserTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/HighlightParserTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/IntermediateParserAddPrivatePageTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserClassGetSourceLocationTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - Class phpDocumentor_peardoc2_XML_Beautifier parent XML_Beautifier not found<br>
+        <b>Warning</b> - Class ClubBase parent PEAR not found<br>
+        <b>Warning</b> - Class phpDocumentor_XML_Beautifier_Tokenizer parent XML_Beautifier_Tokenizer not found<br>
+        <b>Warning</b> - Class PHPDoc_XML_Beautifier_Renderer_Plain parent XML_Beautifier_Renderer not found<br>
+        <b>Warning</b> - Class tests_HighlightParserGetInlineTagsTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - Class tests_IntermediateParserAddPrivatePageTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - Class tests_ParserPageGetSourceLocationTests parent PHPUnit_Framework_TestCase not found<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupCleanConverterNamePieceTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupDecideOnOrOffTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorTParserGetInlineTagsTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate class element "a" in file /home/julien/repositories/doc/phpdocumentor/Documentation/tests/bug-566600.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupCleanConverterNamePieceTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPUnit_MAIN_METHOD" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserClassTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserPageGetSourceLocationTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/ParserClassGetSourceLocationTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+        <b>Warning</b> - 
+duplicate define element "PHPDOCUMENTOR_BASE" in file /home/julien/repositories/doc/phpdocumentor/tests/IntermediateParserAddPrivatePageTests.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+                    <a name="actions.php"></a>
+    <h1>actions.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 35</b> - Page-level DocBlock precedes "include_once "@WEB-DIR@/PhpDocumentor/docbuilder/includes/utilities.php"", use another DocBlock to document the source element<br>
+                    <a name="AllTests.php"></a>
+    <h1>AllTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 26</b> - package default is already in category default, will now replace with category Tools-and-Utilities<br>
+        <b>Warning on line 81</b> - package phpDocumentor is already in category default, will now replace with category Tools-and-Utilities<br>
+                    <a name="Beautifier.php"></a>
+    <h1>Beautifier.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 48</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="bug-542586.php"></a>
+    <h1>bug-542586.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 47</b> - no @package tag was used in a DocBlock for class priv<br>
+                    <a name="bug-553560.php"></a>
+    <h1>bug-553560.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 49</b> - no @package tag was used in a DocBlock for class iHTMLConverter<br>
+                    <a name="bug-556031-01.php"></a>
+    <h1>bug-556031-01.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 8</b> - no @package tag was used in a DocBlock for class baby<br>
+                    <a name="bug-561101.php"></a>
+    <h1>bug-561101.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 71</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 75</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 82</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 86</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 90</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 94</b> - Unknown tag "@const" used<br>
+        <b>Warning on line 102</b> - no @package tag was used in a DocBlock for class ClubBase<br>
+        <b>Warning on line 125</b> - Unknown tag "@brother" used<br>
+        <b>Warning on line 134</b> - Unknown tag "@brother" used<br>
+        <b>Warning on line 143</b> - Unknown tag "@brother" used<br>
+        <b>Warning on line 239</b> - Unknown tag "@brother" used<br>
+        <b>Warning on line 270</b> - Unknown tag "@brother" used<br>
+                    <a name="bug-566600.php"></a>
+    <h1>bug-566600.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 7</b> - no @package tag was used in a DocBlock for class a<br>
+                    <a name="bug-567059.php"></a>
+    <h1>bug-567059.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 7</b> - no @package tag was used in a DocBlock for class a<br>
+                    <a name="bug-587733.php"></a>
+    <h1>bug-587733.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 6</b> - DocBlock would be page-level, but precedes class "parent_b587733", use another DocBlock to document the file<br>
+                    <a name="bug-772441.php"></a>
+    <h1>bug-772441.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 1</b> - no @package tag was used in a DocBlock for class bug_772441<br>
+        <b>Warning on line 37</b> - File "/home/julien/repositories/doc/phpdocumentor/Documentation/tests/bug-772441.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="bug-loseunknowntags.php"></a>
+    <h1>bug-loseunknowntags.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 18</b> - Unknown tag "@foobar" used<br>
+                    <a name="common.inc.php"></a>
+    <h1>common.inc.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 43</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="Converter.inc"></a>
+    <h1>Converter.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 41</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="core.rm_auto.php"></a>
+    <h1>core.rm_auto.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 15</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="create_package.xml.php"></a>
+    <h1>create_package.xml.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 167</b> - File "/home/julien/repositories/doc/phpdocumentor/scripts/create_package.xml.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="DocBlockTags.inc"></a>
+    <h1>DocBlockTags.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 60</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="file_dialog.php"></a>
+    <h1>file_dialog.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 65</b> - 
+duplicate define element "PHPDOC_WEBROOT_DIR" in file /home/julien/repositories/doc/phpdocumentor/docbuilder/file_dialog.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+                    <a name="find_phpdoc.php"></a>
+    <h1>find_phpdoc.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 44</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="HighlightParser.inc"></a>
+    <h1>HighlightParser.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 67</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+        <b>Warning on line 69</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="HighlightParserTests.php"></a>
+    <h1>HighlightParserTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 12</b> - no @package tag was used in a DocBlock for class tests_HighlightParserTests<br>
+        <b>Warning on line 30</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/HighlightParserTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="HTMLSmartyJEvolveConverter.inc"></a>
+    <h1>HTMLSmartyJEvolveConverter.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 16</b> - DocBlock would be page-level, but precedes class "HTMLSmartyJEvolveConverter", use another DocBlock to document the file<br>
+        <b>Warning on line 16</b> - Unknown tag "@project" used<br>
+                    <a name="InlineTags.inc"></a>
+    <h1>InlineTags.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 59</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+        <b>Warning on line 61</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="IntermediateParserTests.php"></a>
+    <h1>IntermediateParserTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 12</b> - no @package tag was used in a DocBlock for class tests_IntermediateParserTests<br>
+        <b>Warning on line 30</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/IntermediateParserTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="Io.inc"></a>
+    <h1>Io.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 48</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+        <b>Warning on line 50</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="LinkClasses.inc"></a>
+    <h1>LinkClasses.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 61</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="Parser.inc"></a>
+    <h1>Parser.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 38</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="ParserClassTests.php"></a>
+    <h1>ParserClassTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 12</b> - no @package tag was used in a DocBlock for class tests_ParserClassTests<br>
+        <b>Warning on line 30</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/ParserClassTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="ParserData.inc"></a>
+    <h1>ParserData.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 57</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="ParserDescCleanup.inc"></a>
+    <h1>ParserDescCleanup.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 45</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+        <b>Warning on line 130</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="ParserDocBlock.inc"></a>
+    <h1>ParserDocBlock.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 45</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+        <b>Warning on line 47</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="ParserElements.inc"></a>
+    <h1>ParserElements.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 47</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+        <b>Warning on line 49</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="ParserPageGetSourceLocationTests.php"></a>
+    <h1>ParserPageGetSourceLocationTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 21</b> - package default is already in category Tools-and-Utilities, will now replace with category default<br>
+                    <a name="ParserPageTests.php"></a>
+    <h1>ParserPageTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 12</b> - no @package tag was used in a DocBlock for class tests_ParserPageTests<br>
+        <b>Warning on line 30</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/ParserPageTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="PDFdefaultConverter.inc"></a>
+    <h1>PDFdefaultConverter.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 40</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="phpdoc.php"></a>
+    <h1>phpdoc.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 21</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="phpDocumentorSetupTests.php"></a>
+    <h1>phpDocumentorSetupTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 13</b> - no @package tag was used in a DocBlock for class tests_phpDocumentorSetupTests<br>
+        <b>Warning on line 32</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorSetupTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="phpDocumentorTParserTests.php"></a>
+    <h1>phpDocumentorTParserTests.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 12</b> - no @package tag was used in a DocBlock for class tests_phpDocumentorTParserTests<br>
+        <b>Warning on line 30</b> - File "/home/julien/repositories/doc/phpdocumentor/tests/phpDocumentorTParserTests.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+                    <a name="phpDocumentorTWordParser.inc"></a>
+    <h1>phpDocumentorTWordParser.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 59</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="Publisher.inc"></a>
+    <h1>Publisher.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 52</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+        <b>Warning on line 54</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="Setup.inc.php"></a>
+    <h1>Setup.inc.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 36</b> - package default is already in category ToolsAndUtilities, will now replace with category default<br>
+        <b>Warning on line 100</b> - package phpDocumentor is already in category ToolsAndUtilities, will now replace with category default<br>
+                    <a name="top.php"></a>
+    <h1>top.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 39</b> - Page-level DocBlock precedes "include_once "PhpDocumentor/phpDocumentor/common.inc.php"", use another DocBlock to document the source element<br>
+                    <a name="TutorialHighlightParser.inc"></a>
+    <h1>TutorialHighlightParser.inc</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 67</b> - package default is already in category default, will now replace with category ToolsAndUtilities<br>
+        <b>Warning on line 69</b> - package phpDocumentor is already in category default, will now replace with category ToolsAndUtilities<br>
+                    <a name="utilities.php"></a>
+    <h1>utilities.php</h1>
+        <h2>Warnings:</h2><br>
+        <b>Warning on line 35</b> - Page-level DocBlock precedes "include_once 'PhpDocumentor/HTML_TreeMenu-1.1.2/TreeMenu.php'", use another DocBlock to document the source element<br>
+                    <a name="bug-541886.php"></a>
+    <h1>bug-541886.php</h1>
+            <h2>Errors:</h2><br>
+        <b>Error on line 18</b> - DocBlock has multiple @subpackage tags, illegal. ignoring additional tag "@subpackage blahblah"<br>
+        <b>Error on line 19</b> - DocBlock has multiple @subpackage tags, illegal. ignoring additional tag "@subpackage blahblah"<br>
+                <a name="bug-555768.php"></a>
+    <h1>bug-555768.php</h1>
+            <h2>Errors:</h2><br>
+        <b>Error on line 24</b> - Inline tag {@link} in tag  is unterminated, "link $type)"<br>
+                <a name="bug-558031.php"></a>
+    <h1>bug-558031.php</h1>
+            <h2>Errors:</h2><br>
+        <b>Error on line 9</b> - DocBlock has multiple @access tags, illegal. ignoring additional tag "@access public"<br>
+                <a name="bug-558051.php"></a>
+    <h1>bug-558051.php</h1>
+            <h2>Errors:</h2><br>
+        <b>Error on line 9</b> - DocBlock has multiple @package tags, illegal. ignoring additional tag "@package ignored"<br>
+        <b>Error on line 10</b> - DocBlock has multiple @access tags, illegal. ignoring additional tag "@access private"<br>
+        <b>Error on line 10</b> - @access was passed neither "public" nor "private."  Was passed: "public poopy"<br>
+        <b>Error on line 23</b> - DocBlock has multiple @var tags, illegal. ignoring additional tag "@var class stupid second one"<br>
+        <b>Error on line 29</b> - DocBlock has multiple @return tags, illegal. ignoring additional tag "@return poopy second return"<br>
+            </div>

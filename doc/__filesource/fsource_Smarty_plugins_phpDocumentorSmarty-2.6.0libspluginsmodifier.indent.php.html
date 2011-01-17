@@ -1,0 +1,34 @@
+<div class='page_content'>
+        <h1>Source for file modifier.indent.php</h1>
+    <p>Documentation is available at <a rel="contents" href="Smarty/plugins/_phpDocumentor---Smarty-2.6.0---libs---plugins---modifier.indent.php.html">modifier.indent.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;Smarty&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;Smarty</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;plugins</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;Smarty&nbsp;indent&nbsp;modifier&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifier&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indent&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*&nbsp;Purpose:&nbsp;&nbsp;indent&nbsp;lines&nbsp;of&nbsp;text</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://smarty.php.net/manual/en/language.modifier.indent.php</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;indent&nbsp;(Smarty&nbsp;online&nbsp;manual)</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">integer&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-key">function&nbsp;</span><a rel="contents" href="Smarty/plugins/_phpDocumentor---Smarty-2.6.0---libs---plugins---modifier.indent.php.html#functionsmarty_modifier_indent">smarty_modifier_indent</a><span class="src-sym">(</span><span class="src-var">$string</span><span class="src-sym">,</span><span class="src-var">$chars</span>=<span class="src-num">4</span><span class="src-sym">,</span><span class="src-var">$char</span>=<span class="src-str">&quot;&nbsp;&quot;</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/preg_replace" rel="contents">preg_replace</a><span class="src-sym">(</span><span class="src-str">'!^!m'</span><span class="src-sym">,</span><a href="http://www.php.net/str_repeat" rel="contents">str_repeat</a><span class="src-sym">(</span><span class="src-var">$char</span><span class="src-sym">,</span><span class="src-var">$chars</span><span class="src-sym">)</span><span class="src-sym">,</span><span class="src-var">$string</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>

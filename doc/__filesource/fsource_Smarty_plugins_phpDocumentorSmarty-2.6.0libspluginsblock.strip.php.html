@@ -1,0 +1,42 @@
+<div class='page_content'>
+        <h1>Source for file block.strip.php</h1>
+    <p>Documentation is available at <a rel="contents" href="Smarty/plugins/_phpDocumentor---Smarty-2.6.0---libs---plugins---block.strip.php.html">block.strip.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;Smarty&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;Smarty</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@subpackage</span><span class="src-doc">&nbsp;plugins</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a7"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;Smarty&nbsp;{strip}{/strip}&nbsp;block&nbsp;plugin</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;Type:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;block&nbsp;function&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strip&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;Purpose:&nbsp;&nbsp;strip&nbsp;unwanted&nbsp;white&nbsp;space&nbsp;from&nbsp;text&lt;br&gt;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://smarty.php.net/manual/en/language.function.strip.php&nbsp;{strip}</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Smarty&nbsp;online&nbsp;manual)</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc">unused,&nbsp;no&nbsp;parameters&nbsp;for&nbsp;this&nbsp;block</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">content&nbsp;of&nbsp;{strip}{/strip}&nbsp;tags</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">Smarty&nbsp;</span><span class="src-doc">clever&nbsp;method&nbsp;emulation</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">$content&nbsp;stripped&nbsp;of&nbsp;whitespace</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-key">function&nbsp;</span><a rel="contents" href="Smarty/plugins/_phpDocumentor---Smarty-2.6.0---libs---plugins---block.strip.php.html#functionsmarty_block_strip">smarty_block_strip</a><span class="src-sym">(</span><span class="src-var">$params</span><span class="src-sym">,&nbsp;</span><span class="src-var">$content</span><span class="src-sym">,&nbsp;</span><span class="src-sym">&amp;</span><span class="src-var">$this</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">/*&nbsp;Reformat&nbsp;data&nbsp;between&nbsp;'strip'&nbsp;and&nbsp;'/strip'&nbsp;tags,&nbsp;removing&nbsp;spaces,&nbsp;tabs&nbsp;and&nbsp;newlines.&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$_strip_search&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">&quot;![\t&nbsp;]+$|^[\t&nbsp;]+!m&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-comm">//&nbsp;remove&nbsp;leading/trailing&nbsp;space&nbsp;chars</span></div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'%[\r\n]+%m'</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span><span class="src-comm">//&nbsp;remove&nbsp;CRs&nbsp;and&nbsp;newlines</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$_strip_replace&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">''</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">''</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/preg_replace" rel="contents">preg_replace</a><span class="src-sym">(</span><span class="src-var">$_strip_search</span><span class="src-sym">,&nbsp;</span><span class="src-var">$_strip_replace</span><span class="src-sym">,&nbsp;</span><span class="src-var">$content</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-comm">/*&nbsp;vim:&nbsp;set&nbsp;expandtab:&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a34"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>

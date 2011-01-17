@@ -1,0 +1,66 @@
+<div class='page_content'>
+        <h1>Source for file tokenizer_test.php</h1>
+    <p>Documentation is available at <a rel="contents" href="tests/_scripts---tokenizer_test.php.html">tokenizer_test.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">$fp&nbsp;=&nbsp;fopen(&quot;../phpDocumentor/Converter.inc&quot;,&quot;r&quot;);</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">$file&nbsp;=&nbsp;fread($fp,filesize(&quot;../phpDocumentor/Converter.inc&quot;));</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">fclose($fp);</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-var">$file&nbsp;</span>=&nbsp;<span class="src-str">&quot;</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-str">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;function&nbsp;&amp;newSmarty()</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!isset(\$this-&gt;package_index))</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach(\$this-&gt;all_packages&nbsp;as&nbsp;\$key&nbsp;=&gt;&nbsp;\$val)</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(\$this-&gt;pkg_elements[\$key]))</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!isset(\$start))&nbsp;\$start&nbsp;=&nbsp;\$key;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$this-&gt;package_index[]&nbsp;=&nbsp;array('link'&nbsp;=&gt;&nbsp;\&quot;li_\$key.html\&quot;,&nbsp;'title'&nbsp;=&gt;&nbsp;\$key);</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ&nbsp;=&nbsp;new&nbsp;Smarty;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;template_dir&nbsp;=&nbsp;\$this-&gt;smarty_dir&nbsp;.&nbsp;PATH_DELIMITER&nbsp;.&nbsp;'templates';</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;compile_dir&nbsp;=&nbsp;\$this-&gt;smarty_dir&nbsp;.&nbsp;PATH_DELIMITER&nbsp;.&nbsp;'templates_c';</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;config_dir&nbsp;=&nbsp;\$this-&gt;smarty_dir&nbsp;.&nbsp;PATH_DELIMITER&nbsp;.&nbsp;'configs';</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;assign(\&quot;packageindex\&quot;,\$this-&gt;package_index);</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;assign(\&quot;phpdocversion\&quot;,PHPDOCUMENTOR_VER);</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;assign(\&quot;phpdocwebsite\&quot;,PHPDOCUMENTOR_WEBSITE);</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;assign(\&quot;package\&quot;,\$this-&gt;package);</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\$templ-&gt;assign(\&quot;subdir\&quot;,'');</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;\$templ;</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-str">&nbsp;&nbsp;&nbsp;&nbsp;}</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-str">?&gt;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-var">$tokens&nbsp;</span>=&nbsp;<a href="http://www.php.net/token_get_all" rel="contents">token_get_all</a><span class="src-sym">(</span><span class="src-var">$file</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-var">$nl_check&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">T_WHITESPACE</span><span class="src-sym">,</span><span class="src-id">T_ENCAPSED_AND_WHITESPACE</span><span class="src-sym">,</span><span class="src-id">T_COMMENT</span><span class="src-sym">,</span><span class="src-id"><a rel="contents" href="phpDocumentor/Parsers/_phpDocumentor---Parser.inc.html#defineT_DOC_COMMENT">T_DOC_COMMENT</a></span><span class="src-sym">,</span><span class="src-id">T_OPEN_TAG</span><span class="src-sym">,</span><span class="src-id">T_CLOSE_TAG</span><span class="src-sym">,</span><span class="src-id">T_INLINE_HTML</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a39"></a>print&nbsp;<span class="src-str">'&lt;pre&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-var">$line&nbsp;</span>=&nbsp;<span class="src-num">0</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$tokens&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$key&nbsp;</span>=&gt;&nbsp;<span class="src-var">$val</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/is_array" rel="contents">is_array</a><span class="src-sym">(</span><span class="src-var">$val</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;seeing&nbsp;if&nbsp;we&nbsp;can&nbsp;get&nbsp;line&nbsp;numbers&nbsp;out&nbsp;of&nbsp;the&nbsp;beast</span></div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">if&nbsp;</span><span class="src-sym">(</span><a href="http://www.php.net/in_array" rel="contents">in_array</a><span class="src-sym">(</span><span class="src-var">$val</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">,</span><span class="src-var">$nl_check</span><span class="src-sym">))</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$line</span>+=<a href="http://www.php.net/substr_count" rel="contents">substr_count</a><span class="src-sym">(</span><span class="src-var">$val</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">,</span><span class="src-str">&quot;\n&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<a href="http://www.php.net/token_name" rel="contents">token_name</a><span class="src-sym">(</span><span class="src-var">$val</span><span class="src-sym">[</span><span class="src-num">0</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">&quot;&nbsp;=&gt;&nbsp;&quot;</span>.<a href="http://www.php.net/htmlentities" rel="contents">htmlentities</a><span class="src-sym">(</span><span class="src-var">$val</span><span class="src-sym">[</span><span class="src-num">1</span><span class="src-sym">]</span><span class="src-sym">)</span>.<span class="src-str">&quot;\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">else</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;<span class="src-str">&quot;</span><span class="src-str">***&nbsp;<span class="src-var">$val</span>\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a57"></a>echo&nbsp;<span class="src-str">&quot;</span><span class="src-str"><span class="src-var">$line</span>\n</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a58"></a>print&nbsp;<span class="src-str">'&lt;/pre&gt;'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>

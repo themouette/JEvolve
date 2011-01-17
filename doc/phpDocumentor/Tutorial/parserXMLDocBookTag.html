@@ -1,0 +1,729 @@
+<div class='page_content'>
+    <h2 class="class-name"><img src="images/Class_logo.png"
+                                                            alt=" Class"
+                                                            title=" Class"
+                                                            style="vertical-align: middle"> parserXMLDocBookTag</h2>
+
+    <a name="sec-description"></a>
+    <div class="info-box">
+        <div class="info-box-title">Description</div>
+        <div class="nav-bar">
+                            <span class="disabled">Description</span> |
+                                                                        <a href="#sec-var-summary" rel='subsection'>Vars</a> (<a href="#sec-vars">details</a>)
+                                |                                                            <a href="#sec-method-summary" rel='subsection'>Methods</a> (<a href="#sec-methods" rel='subsection'>details</a>)
+                			
+                                </div>
+        <div class="info-box-body">
+                        <!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">a standard XML DocBook Tag</p>
+<p class="description"><p>This class is designed to represent all DocBook tags.  It is intelligent  enough to understand the &lt;title&gt; tag, and also the &lt;refname&gt; tag for  as title for &lt;refentry&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">tutorial:</span> <a rel="contents" href="phpDocumentor/tutorial_tutorials.pkg.html">phpDocumentor Tutorials</a></li>
+				<li><span class="field">author:</span> Gregory Beaver &lt;<a href="mailto:cellog@php.net" rel="contents">cellog@php.net</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 1.4.3</li>
+				<li><span class="field">copyright:</span> 2002-2008 Gregory Beaver</li>
+				<li><span class="field">link:</span> <a href="http://pear.php.net/PhpDocumentor" rel="contents">http://pear.php.net/PhpDocumentor</a></li>
+				<li><span class="field">link:</span> <a href="http://www.phpdoc.org" rel="contents">http://www.phpdoc.org</a></li>
+				<li><span class="field">todo:</span> CS cleanup - change package to PhpDocumentor</li>
+				<li><span class="field">todo:</span> CS cleanup - change classname to PhpDocumentor_*</li>
+				<li><span class="field">todo:</span> CS cleanup - rename to parserXmlDocBookTag for camelCase rule</li>
+				<li><span class="field">since:</span> 1.2</li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/lgpl-license.php" rel="contents">LGPL</a></li>
+			</ul>
+            <p class="notes">
+                Located in <a class="field" href="phpDocumentor/Tutorial/_phpDocumentor---PackagePageElements.inc.html" rel='contents'>/phpDocumentor/PackagePageElements.inc</a> (line <span class="field"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a122" rel="contents">122</a></span>)
+            </p>
+            
+                        
+            <pre><a rel="contents" href="phpDocumentor/ParserData/parserBase.html">parserBase</a>
+   |
+    --<a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html">parserStringWithInlineTags</a>
+      |
+       --parserXMLDocBookTag</pre>
+        
+                    </div>
+    </div>
+
+    
+    
+            <a name="sec-var-summary"></a>
+        <div class="info-box">
+            <div class="info-box-title">Variable Summary</span></div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                <span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+                                    | 
+                                            <a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+                    			
+                                            </div>
+            <div class="info-box-body">
+                <div class="var-summary">
+                                                                                                                                                                <div class="var-title">
+                        <img src="images/Variable.png" alt=" " />
+                        <span class="var-type">array</span>
+                        <a href="#$attributes" title="details" class="var-name">$attributes</a>
+                    </div>
+                                                                                <div class="var-title">
+                        <img src="images/Variable.png" alt=" " />
+                        <span class="var-type">string</span>
+                        <a href="#$name" title="details" class="var-name">$name</a>
+                    </div>
+                                                        </div>
+            </div>
+        </div>
+    
+            <a name="sec-method-summary"></a>
+        <div class="info-box">
+            <div class="info-box-title">Method Summary</span></div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                                                                            <a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+                     
+                    |
+                                <span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+            </div>
+            <div class="info-box-body">			
+                <div class="method-summary">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="method-definition">
+                        <img src="images/Constructor.png" alt=" "/>
+                        <a href="#parserXMLDocBookTag" title="details" class="method-name">parserXMLDocBookTag</a>
+                                                    (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+                                                                            <span class="method-result">parserXMLDocBookTag</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#add" title="details" class="method-name">add</a>
+                                                    (<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserEntity.html">parserEntity</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserCData.html">parserCData</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a>|string</span>&nbsp;<span class="var-name">$el</span>)
+                                                                            <span class="method-result">mixed</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#addAttribute" title="details" class="method-name">addAttribute</a>
+                                                    (<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string|<a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>&nbsp;<span class="var-name">$value</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#addCData" title="details" class="method-name">addCData</a>
+                                                    (<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#Convert" title="details" class="method-name">Convert</a>
+                                                    (<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$postprocess</span> = <span class="var-default">true</span>])
+                                                                            <span class="method-result">string</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#endCData" title="details" class="method-name">endCData</a>
+                                                ()
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#getId" title="details" class="method-name">getId</a>
+                                                    (<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>)
+                                                                            <span class="method-result">string</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#getSubsection" title="details" class="method-name">getSubsection</a>
+                                                    (<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subsection</span>)
+                                                                            <span class="method-result">bool|string</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#getTitle" title="details" class="method-name">getTitle</a>
+                                                    (<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>)
+                                                                            <span class="method-result">string</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#getTOC" title="details" class="method-name">getTOC</a>
+                                                    ([<span class="var-type">false|integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+                                                                            <span class="method-result">int</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#hasTitle" title="details" class="method-name">hasTitle</a>
+                                                ()
+                                                                            <span class="method-result">boolean</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#setId" title="details" class="method-name">setId</a>
+                                                    (<span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>&nbsp;<span class="var-name">$id</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#setTitle" title="details" class="method-name">setTitle</a>
+                                                    (<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a></span>&nbsp;<span class="var-name">$title</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#setTOC" title="details" class="method-name">setTOC</a>
+                                                    (<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span>, <span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserTocInlineTag.html">parserTocInlineTag</a></span>&nbsp;<span class="var-name">$val</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#startCData" title="details" class="method-name">startCData</a>
+                                                ()
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                        </div>
+            </div>
+        </div>		
+    
+            <a name="sec-vars"></a>
+        <div class="info-box">
+            <div class="info-box-title">Variables</div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                                    <a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+                			
+                
+                                                    | 
+                                            <a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+                    			
+                            </div>
+            <div class="info-box-body">
+                
+<a name="$attributes" id="$attributes"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$attributes</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a130" rel="contents">130</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attributes from the XML tag</p>
+<p class="description"><p>Format: array(attrname =&gt; attrvalue, attrname =&gt; attrvalue,...)</p></p>
+	
+	
+		
+		
+
+</div>
+<a name="$name" id="$name"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">string</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a135" rel="contents">135</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Name of the tag</p>
+	
+	
+		
+		
+
+</div>
+                                    <h4>Inherited Variables</h4>
+                    <A NAME='inherited_vars'><!-- --></A>
+                                            <p>Inherited from <span class="classname"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html">parserStringWithInlineTags</a></span></p>
+                        <blockquote>
+                                                            <img src="images/Variable.png" />
+                                <span class="var-title">
+                                    <span class="var-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#var$type">parserStringWithInlineTags::$type</a></span><br>
+                                </span>
+                                                            <img src="images/Variable.png" />
+                                <span class="var-title">
+                                    <span class="var-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#var$value">parserStringWithInlineTags::$value</a></span><br>
+                                </span>
+                                                    </blockquote> 
+                                    			
+            </div>
+        </div>
+            
+            <a name="sec-methods"></a>
+        <div class="info-box">
+            <div class="info-box-title">Methods</div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                                                            <a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+                                                                        <a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+                			
+            </div>
+            <div class="info-box-body">
+                <A NAME='method_detail'></A>
+<a name="parserXMLDocBookTag" id="parserXMLDocBookTag"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Constructor.png" />
+		<span class="method-title">Constructor parserXMLDocBookTag</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a165" rel="contents">165</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sets up the tag</p>
+	<ul class="tags">
+				<li><span class="field">todo:</span> CS cleanup - rename to parserXmlDocBookTag for camelCase rule</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">parserXMLDocBookTag</span>
+		<span class="method-name">
+			parserXMLDocBookTag
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: tag name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="add" id="add"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">add</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a443" rel="contents">443</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add contents to this tag.</p>
+<p class="description"><p>There are four kinds of data in a DocBook tutorial: <ol><li><strong>tags</strong> - normal tags like &lt;refentry&gt;</li><li><strong>entities</strong> - normal entities like &amp;rdquo;</li><li><strong>&lt;![CDATA[</strong> - character data that should not be interpreted,
+     like &lt;programlisting&gt; contents</li><li><strong>text</strong> - normal non-markup text</li></ol>  All four kinds of data are added here</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserEntity.html">parserEntity</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserCData.html">parserCData</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a>|string</span>&nbsp;<span class="var-name">$el</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserEntity.html">parserEntity</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserCData.html">parserCData</a>|<a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a>|string</span>
+				<span class="var-name">$el</span><span class="var-description">: nested tag,                                                                 entity, or text</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodadd">parserStringWithInlineTags::add()</a></dt>
+						<dd>equivalent to the . operator ($a = $b . $c)</dd>
+					</dl>
+			
+	</div>
+<a name="addAttribute" id="addAttribute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">addAttribute</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a271" rel="contents">271</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Add an xml tag attribute name=&quot;value&quot; pair</p>
+<p class="description"><p>if the attribute is id, value must be a <a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addAttribute
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string|<a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: attribute name</span>			</li>
+					<li>
+				<span class="var-type">string|<a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>
+				<span class="var-name">$value</span><span class="var-description">: value of attribute</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="addCData" id="addCData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">addCData</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a256" rel="contents">256</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add a word to CData</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addCData
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$word</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$word</span><span class="var-description">: word to add</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="Convert" id="Convert"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">Convert</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a180" rel="contents">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">calls the output conversion</p>
+	<ul class="tags">
+				<li><span class="field">uses:</span> <a rel="contents" href="Converters/Converter.html#methodTranslateTag">Converter::TranslateTag()</a> - Calls this to enclose the contents of the
+       DocBook tag based on the values in template options.ini file</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			Convert
+		</span>
+					(<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$postprocess</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>
+				<span class="var-name">&$c</span><span class="var-description">: the output converter</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$postprocess</span><span class="var-description">: if postprocessing is needed</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodConvert">parserStringWithInlineTags::Convert()</a></dt>
+						<dd>Use to convert the string to a real string  with all inline tags parsed and linked</dd>
+					</dl>
+			
+	</div>
+<a name="endCData" id="endCData"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">endCData</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a211" rel="contents">211</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds $_cdata to $value</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			endCData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="getId" id="getId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getId</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a323" rel="contents">323</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return converter-specific formatting of ID.</p>
+<p class="description"><p>Passes $c to <a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html#methodConvert">parserIdInlineTag::Convert()</a></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getId
+		</span>
+					(<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>
+				<span class="var-name">&$c</span><span class="var-description">: the output converter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getSubsection" id="getSubsection"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getSubsection</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a401" rel="contents">401</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the contents of a subsection</p>
+<p class="description"><p>This method uses the $_id members of nested docbook tags to retrieve  the section defined by $subsection</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">bool|string</span>
+		<span class="method-name">
+			getSubsection
+		</span>
+					(<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$subsection</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>
+				<span class="var-name">&$c</span><span class="var-description">: the output converter</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$subsection</span><span class="var-description">: converter-specific subsection</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTitle" id="getTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getTitle</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a347" rel="contents">347</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve Converter-specific formatting of the title of this element</p>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTitle
+		</span>
+					(<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>&nbsp;<span class="var-name">&$c</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="Converters/Converter.html">Converter</a></span>
+				<span class="var-name">&$c</span><span class="var-description">: the output converter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="getTOC" id="getTOC"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getTOC</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a228" rel="contents">228</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve either the table of contents index,  or the location that the TOC will go</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html#methodsetTOC">parserXMLDocBookTag::setTOC()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			getTOC
+		</span>
+					([<span class="var-type">false|integer</span>&nbsp;<span class="var-name">$state</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">false|integer</span>
+				<span class="var-name">$state</span><span class="var-description">: either an index of the {@toc} tag in $this-&gt;value                              or false, if the next index value of $this-&gt;value                              is needed</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="hasTitle" id="hasTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">hasTitle</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a335" rel="contents">335</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determine whether the docbook element has a title</p>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			hasTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setId" id="setId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setId</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a309" rel="contents">309</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If the id attribute is present, this method will set its id</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setId
+		</span>
+					(<span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserIdInlineTag.html">parserIdInlineTag</a></span>
+				<span class="var-name">$id</span><span class="var-description">: the id value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setTitle" id="setTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setTitle</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a297" rel="contents">297</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the title of a DocBook tag section.</p>
+<p class="description"><p>For most DocBook tags, the title is represented with a &lt;title&gt;&lt;/title&gt;  tag pair.  The &lt;refentry&gt; top-level tag is a little different.  Instead  of using &lt;title&gt;&lt;/title&gt;, phpDocumentor uses the contents of the  &lt;refname&gt; tag in the &lt;refnamediv&gt; tag</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setTitle
+		</span>
+					(<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a></span>&nbsp;<span class="var-name">$title</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html">parserXMLDocBookTag</a></span>
+				<span class="var-name">$title</span><span class="var-description">: the title element</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="setTOC" id="setTOC"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setTOC</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a244" rel="contents">244</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sets the TOC value</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setTOC
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$state</span>, <span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserTocInlineTag.html">parserTocInlineTag</a></span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$state</span><span class="var-description">: index of the TOC in $this-&gt;value</span>			</li>
+					<li>
+				<span class="var-type"><a rel="contents" href="phpDocumentor/InlineTags/parserTocInlineTag.html">parserTocInlineTag</a></span>
+				<span class="var-name">$val</span><span class="var-description">: tag value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="startCData" id="startCData"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">startCData</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Tutorial_phpDocumentorPackagePageElements.inc.html#a201" rel="contents">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Begin a new CData section</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a rel="contents" href="phpDocumentor/Tutorial/parserXMLDocBookTag.html#methodaddCData">parserXMLDocBookTag::addCData()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			startCData
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+                                    <h4>Inherited Methods</h4>
+                    <a name='inherited_methods'><!-- --></a>	
+                                            <!-- =========== Summary =========== -->
+                        <p>Inherited From <span class="classname"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html">parserStringWithInlineTags</a></span></p>
+                        <blockquote>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodadd">parserStringWithInlineTags::add()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodConvert">parserStringWithInlineTags::Convert()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodgetString">parserStringWithInlineTags::getString()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodhasInlineTag">parserStringWithInlineTags::hasInlineTag()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodsetSource">parserStringWithInlineTags::setSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserStringWithInlineTags.html#methodtrimmedStrlen">parserStringWithInlineTags::trimmedStrlen()</a></span><br>
+                                                    </blockquote>
+                                            <!-- =========== Summary =========== -->
+                        <p>Inherited From <span class="classname"><a rel="contents" href="phpDocumentor/ParserData/parserBase.html">parserBase</a></span></p>
+                        <blockquote>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserBase.html#methodgetType">parserBase::getType()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserBase.html#methodgetValue">parserBase::getValue()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/ParserData/parserBase.html#methodsetValue">parserBase::setValue()</a></span><br>
+                                                    </blockquote>
+                                    			
+            </div>
+        </div>
+    
+    </div>

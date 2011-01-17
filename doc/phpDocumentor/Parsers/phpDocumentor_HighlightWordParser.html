@@ -1,0 +1,274 @@
+<div class='page_content'>
+    <h2 class="class-name"><img src="images/Class_logo.png"
+                                                            alt=" Class"
+                                                            title=" Class"
+                                                            style="vertical-align: middle"> phpDocumentor_HighlightWordParser</h2>
+
+    <a name="sec-description"></a>
+    <div class="info-box">
+        <div class="info-box-title">Description</div>
+        <div class="nav-bar">
+                            <span class="disabled">Description</span> |
+                                                                                    <a href="#sec-method-summary" rel='subsection'>Methods</a> (<a href="#sec-methods" rel='subsection'>details</a>)
+                			
+                                </div>
+        <div class="info-box-body">
+                        <!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve tokens from an array of tokens organized by line numbers</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Gregory Beaver &lt;<a href="mailto:cellog@php.net" rel="contents">cellog@php.net</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 1.4.3</li>
+				<li><span class="field">copyright:</span> 2002-2008 Gregory Beaver</li>
+				<li><span class="field">link:</span> <a href="http://pear.php.net/PhpDocumentor" rel="contents">http://pear.php.net/PhpDocumentor</a></li>
+				<li><span class="field">link:</span> <a href="http://www.phpdoc.org" rel="contents">http://www.phpdoc.org</a></li>
+				<li><span class="field">todo:</span> CS cleanup - change package to PhpDocumentor</li>
+				<li><span class="field">todo:</span> CS cleanup - change class name to PhpDocumentor_*</li>
+				<li><span class="field">since:</span> 1.2.0beta3</li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/lgpl-license.php" rel="contents">LGPL</a></li>
+			</ul>
+            <p class="notes">
+                Located in <a class="field" href="phpDocumentor/Parsers/_phpDocumentor---HighlightParser.inc.html" rel='contents'>/phpDocumentor/HighlightParser.inc</a> (line <span class="field"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorHighlightParser.inc.html#a69" rel="contents">69</a></span>)
+            </p>
+            
+                        
+            <pre><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html">WordParser</a>
+   |
+    --<a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html">phpDocumentorTWordParser</a>
+      |
+       --phpDocumentor_HighlightWordParser</pre>
+        
+                    </div>
+    </div>
+
+    
+    
+    
+            <a name="sec-method-summary"></a>
+        <div class="info-box">
+            <div class="info-box-title">Method Summary</span></div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                                                <span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+            </div>
+            <div class="info-box-body">			
+                <div class="method-summary">
+                                                                                                                                                                                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#backupPos" title="details" class="method-name">backupPos</a>
+                                                    (<span class="var-type">array|string</span>&nbsp;<span class="var-name">$last_token</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$is_pos</span> = <span class="var-default">false</span>])
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#getWord" title="details" class="method-name">getWord</a>
+                                                ()
+                                                                            <span class="method-result">array|string</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#nextToken" title="details" class="method-name">nextToken</a>
+                                                ()
+                                                                            <span class="method-result">array</span>
+                                            </div>
+                                                                                <div class="method-definition">
+                        <img src="images/Method.png" alt=" "/>
+                        <a href="#setup" title="details" class="method-name">setup</a>
+                                                    (<span class="var-type">array</span>&nbsp;<span class="var-name">&$input</span>, <span class="var-type"><a rel="contents" href="phpDocumentor/Parsers/phpDocumentor_HighlightParser.html">phpDocumentor_HighlightParser</a></span>&nbsp;<span class="var-name">&$parser</span>)
+                                                                            <span class="method-result">void</span>
+                                            </div>
+                                                        </div>
+            </div>
+        </div>		
+    
+            
+            <a name="sec-methods"></a>
+        <div class="info-box">
+            <div class="info-box-title">Methods</div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                                                    <a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+                			
+            </div>
+            <div class="info-box-body">
+                <A NAME='method_detail'></A>
+<a name="backupPos" id="backupPos"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">backupPos</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorHighlightParser.inc.html#a172" rel="contents">172</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">back the word parser to the previous token as defined by $last_token</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			backupPos
+		</span>
+					(<span class="var-type">array|string</span>&nbsp;<span class="var-name">$last_token</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$is_pos</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array|string</span>
+				<span class="var-name">$last_token</span><span class="var-description">: token, or output from <a rel="contents" href="phpDocumentor/Parsers/phpDocumentor_HighlightWordParser.html#methodnextToken">nextToken()</a></span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$is_pos</span><span class="var-description">: if true, backupPos interprets $last_token                                  to be the position in the internal token                                  array of the last token</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodbackupPos">phpDocumentorTWordParser::backupPos()</a></dt>
+						<dd>backs the parser up to the previous position</dd>
+					</dl>
+			
+	</div>
+<a name="getWord" id="getWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">getWord</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorHighlightParser.inc.html#a147" rel="contents">147</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the next token</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> either array(PHP token constant, token) or string                       non-specific separator</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array|string</span>
+		<span class="method-name">
+			getWord
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodgetWord">phpDocumentorTWordParser::getWord()</a></dt>
+						<dd>Retrieve a token for the phpDocumentorTParser</dd>
+					</dl>
+			
+	</div>
+<a name="nextToken" id="nextToken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">nextToken</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorHighlightParser.inc.html#a127" rel="contents">127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Retrieve the position of the next token that will be parsed  in the internal token array</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> format: array(line number, position)</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			nextToken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="setup" id="setup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="images/Method.png" />
+		<span class="method-title">setup</span> (line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorHighlightParser.inc.html#a85" rel="contents">85</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Initialize the parser object</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setup
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$input</span>, <span class="var-type"><a rel="contents" href="phpDocumentor/Parsers/phpDocumentor_HighlightParser.html">phpDocumentor_HighlightParser</a></span>&nbsp;<span class="var-name">&$parser</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$input</span><span class="var-description">: the input</span>			</li>
+					<li>
+				<span class="var-type"><a rel="contents" href="phpDocumentor/Parsers/phpDocumentor_HighlightParser.html">phpDocumentor_HighlightParser</a></span>
+				<span class="var-name">&$parser</span><span class="var-description">: the parser</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodsetup">phpDocumentorTWordParser::setup()</a></dt>
+						<dd>Uses <a href="http://www.php.net/token_get_all" rel="contents">http://www.php.net/token_get_all</a> to tokenize the source code.</dd>
+					</dl>
+			
+	</div>
+                                    <h4>Inherited Methods</h4>
+                    <a name='inherited_methods'><!-- --></a>	
+                                            <!-- =========== Summary =========== -->
+                        <p>Inherited From <span class="classname"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html">phpDocumentorTWordParser</a></span></p>
+                        <blockquote>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodaddFileSource">phpDocumentorTWordParser::addFileSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodaddSource">phpDocumentorTWordParser::addSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodbackupPos">phpDocumentorTWordParser::backupPos()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodconcatTokens">phpDocumentorTWordParser::concatTokens()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodfindGlobal">phpDocumentorTWordParser::findGlobal()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodgetFileSource">phpDocumentorTWordParser::getFileSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodgetSource">phpDocumentorTWordParser::getSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodgetWord">phpDocumentorTWordParser::getWord()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodsetup">phpDocumentorTWordParser::setup()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/phpDocumentorTWordParser.html#methodtokenEquals">phpDocumentorTWordParser::tokenEquals()</a></span><br>
+                                                    </blockquote>
+                                            <!-- =========== Summary =========== -->
+                        <p>Inherited From <span class="classname"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html">WordParser</a></span></p>
+                        <blockquote>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodbackupPos">WordParser::backupPos()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodgetBlock">WordParser::getBlock()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodgetPos">WordParser::getPos()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodgetSource">WordParser::getSource()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodgetWord">WordParser::getWord()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodsetPos">WordParser::setPos()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodsetSeperator">WordParser::setSeperator()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodsetup">WordParser::setup()</a></span><br>
+                                                            <img src="images/Method.png" alt=" "/>
+                                <span class="method-name"><a rel="contents" href="phpDocumentor/WordParsers/WordParser.html#methodsetWhitespace">WordParser::setWhitespace()</a></span><br>
+                                                    </blockquote>
+                                    			
+            </div>
+        </div>
+    
+    </div>

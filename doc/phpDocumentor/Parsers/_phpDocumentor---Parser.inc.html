@@ -1,0 +1,1984 @@
+<div class='page_content'>
+    <h2 class="file-name"><img src="images/Page_logo.png" alt="File" style="vertical-align: middle">/phpDocumentor/Parser.inc</h2>
+
+    <a name="sec-description"></a>
+    <div class="info-box">
+        <div class="info-box-title">Description</div>
+        <div class="nav-bar">
+                            <span class="disabled">Description</span> |
+                                        <a href="#sec-classes">Classes</a>
+                |                                                    <a href="#sec-constants">Constants</a>
+                                                            </div>
+        <div class="info-box-body">	
+            <!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Base parser for all parsers</p>
+<p class="description"><p>phpDocumentor :: automatic documentation generator</p><p>PHP versions 4 and 5</p><p>Copyright (c) 2000-2006 Joshua Eichorn, Gregory Beaver</p><p>LICENSE:</p><p>This library is free software; you can redistribute it  and/or modify it under the terms of the GNU Lesser General  Public License as published by the Free Software Foundation;  either version 2.1 of the License, or (at your option) any  later version.</p><p>This library is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU  Lesser General Public License for more details.</p><p>You should have received a copy of the GNU Lesser General Public  License along with this library; if not, write to the Free Software  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Joshua Eichorn &lt;<a href="mailto:jeichorn@phpdoc.org" rel="contents">jeichorn@phpdoc.org</a>&gt;</li>
+				<li><span class="field">author:</span> Gregory Beaver &lt;<a href="mailto:cellog@php.net" rel="contents">cellog@php.net</a>&gt;</li>
+				<li><span class="field">version:</span> CVS: $Id: Parser.inc 238276 2007-06-22 14:58:30Z ashnazg $</li>
+				<li><span class="field">copyright:</span> 2000-2006 Joshua Eichorn, Gregory Beaver</li>
+				<li><span class="field">link:</span> <a href="http://pear.php.net/PhpDocumentor" rel="contents">http://pear.php.net/PhpDocumentor</a></li>
+				<li><span class="field">link:</span> <a href="http://www.phpdoc.org" rel="contents">http://www.phpdoc.org</a></li>
+				<li><span class="field">since:</span> 0.1</li>
+				<li><span class="field">filesource:</span> <a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html" rel="contents">Source Code for this file</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/lgpl-license.php" rel="contents">LGPL</a></li>
+			</ul>
+            
+                    </div>
+    </div>
+            
+            <a name="sec-classes"></a>	
+        <div class="info-box">
+            <div class="info-box-title">Classes</div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                <span class="disabled">Classes</span>
+                |                                                    <a href="#sec-constants">Constants</a>
+                                                                                </div>
+            <div class="info-box-body">	
+                <table cellpadding="2" cellspacing="0" class="class-table">
+                    <tr>
+                        <th class="class-table-header">Class</th>
+                        <th class="class-table-header">Description</th>
+                    </tr>
+                                        <tr>
+                        <td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+                            <img src="images/Class.png"
+                                     alt=" class"
+                                     title=" class"/>
+                            <a rel="contents" href="phpDocumentor/Parsers/Parser.html">Parser</a>
+                        </td>
+                        <td>
+                                                    PHP Parser for PHP 4.2.3-
+                                                </td>
+                    </tr>
+                                        <tr>
+                        <td style="padding-right: 2em; vertical-align: top; white-space: nowrap">
+                            <img src="images/Class.png"
+                                     alt=" class"
+                                     title=" class"/>
+                            <a rel="contents" href="phpDocumentor/Parsers/ppageParser.html">ppageParser</a>
+                        </td>
+                        <td>
+                                                    Global package page parser
+                                                </td>
+                    </tr>
+                                    </table>
+            </div>
+        </div>
+    
+            
+            <a name="sec-constants"></a>	
+        <div class="info-box">
+            <div class="info-box-title">Constants</div>
+            <div class="nav-bar">
+                <a href="#sec-description">Description</a> |
+                                    <a href="#sec-classes">Classes</a>
+                    |                                                <span class="disabled">Constants</span>
+                                                            </div>
+            <div class="info-box-body">	
+                <a name="definePARSER_EVENT_ACCESS_MODIFIER"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_ACCESS_MODIFIER</span> = 139
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a277" rel="contents">277</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing an access modifier</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_ARRAY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_ARRAY</span> = 115
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a160" rel="contents">160</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when an array definition is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_CLASS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_CLASS</span> = 111
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a138" rel="contents">138</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a class definition is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_CLASS_CONSTANT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_CLASS_CONSTANT</span> = 141
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a287" rel="contents">287</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a class implements interfaces</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_CLASS_MEMBER"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_CLASS_MEMBER</span> = 137
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a267" rel="contents">267</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used by the HighlightParser only, when -&gt;var or -&gt;function() is encountered in a method</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_COMMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_COMMENT</span> = 105
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a108" rel="contents">108</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when short comment // is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_COMMENTBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_COMMENTBLOCK</span> = 104
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a103" rel="contents">103</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when long comment /x x/ where x is an asterisk is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DEFINE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DEFINE</span> = 107
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a118" rel="contents">118</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a define statement is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DEFINE_GLOBAL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DEFINE_GLOBAL</span> = 128
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a222" rel="contents">222</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing a global variable declaration</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DEFINE_PARAMS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DEFINE_PARAMS</span> = 108
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a123" rel="contents">123</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a define statement opening parenthesis is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DEFINE_PARAMS_PARENTHESIS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DEFINE_PARAMS_PARENTHESIS</span> = 120
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a185" rel="contents">185</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a define statement's opening parenthesis is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DESC"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DESC</span> = 126
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a212" rel="contents">212</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing the desc part of a docblock</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DOCBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DOCBLOCK</span> = 112
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a145" rel="contents">145</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a DocBlock is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DOCBLOCK_TEMPLATE</span> = 133
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a247" rel="contents">247</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when encountering a /**#@+ comment marking a new docblock template</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DOCKEYWORD"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DOCKEYWORD</span> = 113
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a150" rel="contents">150</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a @tag is encountered in DocBlock parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_DOCKEYWORD_EMAIL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_DOCKEYWORD_EMAIL</span> = 114
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a155" rel="contents">155</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a &lt;email@address&gt; is encountered in parsing an @author tag</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_END_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_END_DOCBLOCK_TEMPLATE</span> = 134
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a252" rel="contents">252</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when encountering a /**#@-* / comment (no space) marking the end of using a docblock template</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_END_STATEMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_END_STATEMENT</span> = 121
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a189" rel="contents">189</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="definePARSER_EVENT_EOFQUOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_EOFQUOTE</span> = 122
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a192" rel="contents">192</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a &lt;&lt;&lt; is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_ESCAPE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_ESCAPE</span> = 900
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a40" rel="contents">40</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a backslash is encountered in parsing a string or other escapable entity</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_FUNCTION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_FUNCTION</span> = 117
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a170" rel="contents">170</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a function definition is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_FUNCTION_PARAMS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_FUNCTION_PARAMS</span> = 109
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a128" rel="contents">128</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a function statement opening parenthesis is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_FUNCTION_PARAM_VAR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_FUNCTION_PARAM_VAR</span> = 144
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a302" rel="contents">302</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a $param is encountered in a function definition</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_FUNC_GLOBAL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_FUNC_GLOBAL</span> = 130
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a232" rel="contents">232</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing a &quot;global $var1, $var2;&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_GLOBAL_VALUE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_GLOBAL_VALUE</span> = 129
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a227" rel="contents">227</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing the default value in a global variable declaration</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_IMPLEMENTS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_IMPLEMENTS</span> = 140
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a282" rel="contents">282</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a class implements interfaces</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_INCLUDE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_INCLUDE</span> = 123
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a197" rel="contents">197</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when an include/require/include_once/include_once statement is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_INCLUDE_PARAMS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_INCLUDE_PARAMS</span> = 124
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a202" rel="contents">202</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when an opening parenthesis of an include/require/include_once/include_once statement is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_INCLUDE_PARAMS_PARENTHESIS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_INCLUDE_PARAMS_PARENTHESIS</span> = 125
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a207" rel="contents">207</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when an inner ( ) is encountered while parsing an include/require/include_once/include_once statement</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_INLINE_DOCKEYWORD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_INLINE_DOCKEYWORD</span> = 119
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a180" rel="contents">180</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when an inline {@tag} is encountered in parsing a DocBlock</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_LOGICBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_LOGICBLOCK</span> = 102
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a93" rel="contents">93</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">{ encountered in parsing a function or php code</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_METHOD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_METHOD</span> = 135
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a257" rel="contents">257</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used by the HighlightParser only, when a method starts</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_METHOD_LOGICBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_METHOD_LOGICBLOCK</span> = 136
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a262" rel="contents">262</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used by the HighlightParser only, when a method body is parsed</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_NOEVENTS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_NOEVENTS</span> = 103
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a98" rel="contents">98</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used for the beginning of parsing, before first &lt; ? php encountered</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_OUTPHP"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_OUTPHP</span> = 118
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a175" rel="contents">175</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a ? &gt; (with no space) is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_PHPCODE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_PHPCODE</span> = 106
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a113" rel="contents">113</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when php code processor instruction (&lt; ? php) is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_QUOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_QUOTE</span> = 101
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a88" rel="contents">88</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when double quotation mark (&quot;) encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_QUOTE_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_QUOTE_VAR</span> = 138
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a272" rel="contents">272</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used by the HighlightParser only, when {$var} is encountered in a string</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_SINGLEQUOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_SINGLEQUOTE</span> = 110
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a133" rel="contents">133</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a single quote (') is encountered in parsing</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_STATIC_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_STATIC_VAR</span> = 131
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a237" rel="contents">237</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing a &quot;static $var1, $var2;&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_STATIC_VAR_VALUE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_STATIC_VAR_VALUE</span> = 132
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a242" rel="contents">242</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing the value in a &quot;static $var1 = x&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_TAGS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_TAGS</span> = 127
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a217" rel="contents">217</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when parsing the @tag block of a docblock</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_VAR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_VAR</span> = 116
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a165" rel="contents">165</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a var statement is encountered in parsing a class definition</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_VAR_ARRAY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_VAR_ARRAY</span> = 142
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a292" rel="contents">292</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a variable value is an array</p>
+	
+		
+</div>
+<a name="definePARSER_EVENT_VAR_ARRAY_COMMENT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PARSER_EVENT_VAR_ARRAY_COMMENT</span> = 143
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a297" rel="contents">297</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a comment is found in a variable array value</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_CLASS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_CLASS</span> = 800
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a45" rel="contents">45</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_CONST"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_CONST</span> = 806
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a57" rel="contents">57</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class Constant published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_DEFINE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_DEFINE</span> = 805
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a55" rel="contents">55</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constant (define) published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_DOCBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_DOCBLOCK</span> = 801
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a47" rel="contents">47</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DocBlock published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_DOCBLOCK_TEMPLATE</span> = 814
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a84" rel="contents">84</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a docblock template is encountered in the source</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_END_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_END_DOCBLOCK_TEMPLATE</span> = 815
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a86" rel="contents">86</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a docblock template is encountered in the source</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_END_PAGE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_END_PAGE</span> = 808
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a67" rel="contents">67</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used to inform phpDocumentor_IntermediateParser that the current file has been completely parsed.</p>
+<p class="description"><p>Render then flushes all buffers for functions/classes/defines/includes on the current page</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a rel="contents" href="phpDocumentor/phpDocumentor_IntermediateParser.html#methodHandleEvent">phpDocumentor_IntermediateParser::HandleEvent()</a></li>
+			</ul>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_FUNCTION"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_FUNCTION</span> = 802
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a49" rel="contents">49</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_GLOBAL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_GLOBAL</span> = 813
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a82" rel="contents">82</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a global variable definition is encountered in the source</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_INCLUDE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_INCLUDE</span> = 810
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a71" rel="contents">71</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Include (include/require/include_once/include_once) published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_MESSAGE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_MESSAGE</span> = 807
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a59" rel="contents">59</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">deprecated:</span> </li>
+			</ul>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_NEWFILE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_NEWFILE</span> = 811
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a78" rel="contents">78</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">use to inform ErrorTracker of a new file being parsed</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_NEWLINENUM"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_NEWLINENUM</span> = 812
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a80" rel="contents">80</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">use to inform ErrorTracker of the next line number being parsed</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_NEWSTATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_NEWSTATE</span> = 808
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a61" rel="contents">61</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">use to inform IntermediateParser of a new element being parsed</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_PACKAGEPAGE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_PACKAGEPAGE</span> = 809
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a69" rel="contents">69</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Package-level page published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_PAGE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_PAGE</span> = 804
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a53" rel="contents">53</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">New File (page) published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_README_INSTALL_CHANGELOG"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_README_INSTALL_CHANGELOG</span> = 812
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a75" rel="contents">75</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Contents of README/INSTALL/CHANGELOG files published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_TUTORIAL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_TUTORIAL</span> = 811
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a73" rel="contents">73</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tutorial published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="definePHPDOCUMENTOR_EVENT_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">PHPDOCUMENTOR_EVENT_VAR</span> = 803
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a51" rel="contents">51</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class Variable published to IntermediateParser with this event</p>
+	
+		
+</div>
+<a name="defineSTATE_ACCESS_MODIFIER"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_ACCESS_MODIFIER</span> = 239
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a279" rel="contents">279</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an access modifier</p>
+	
+		
+</div>
+<a name="defineSTATE_ARRAY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_ARRAY</span> = 215
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a162" rel="contents">162</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an array</p>
+	
+		
+</div>
+<a name="defineSTATE_CLASS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_CLASS</span> = 211
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a140" rel="contents">140</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a class definition</p>
+	
+		
+</div>
+<a name="defineSTATE_CLASS_CONSTANT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_CLASS_CONSTANT</span> = 241
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a289" rel="contents">289</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a class constant</p>
+	
+		
+</div>
+<a name="defineSTATE_CLASS_MEMBER"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_CLASS_MEMBER</span> = 237
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a269" rel="contents">269</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a class member using the HighlightParser</p>
+	
+		
+</div>
+<a name="defineSTATE_COMMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_COMMENT</span> = 205
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a110" rel="contents">110</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a short comment //</p>
+	
+		
+</div>
+<a name="defineSTATE_COMMENTBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_COMMENTBLOCK</span> = 204
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a105" rel="contents">105</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a long comment /x x/ where x is an asterisk</p>
+	
+		
+</div>
+<a name="defineSTATE_DEFINE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DEFINE</span> = 207
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a120" rel="contents">120</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a define statement</p>
+	
+		
+</div>
+<a name="defineSTATE_DEFINE_PARAMS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DEFINE_PARAMS</span> = 208
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a125" rel="contents">125</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the stuff in ( ) of a define statement</p>
+	
+		
+</div>
+<a name="defineSTATE_DEFINE_PARAMS_PARENTHESIS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DEFINE_PARAMS_PARENTHESIS</span> = 220
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a187" rel="contents">187</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an inner parenthetical statement of a define( )</p>
+	
+		
+</div>
+<a name="defineSTATE_DESC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DESC</span> = 226
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a214" rel="contents">214</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the desc part of a docblock</p>
+	
+		
+</div>
+<a name="defineSTATE_DOCBLOCK"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DOCBLOCK</span> = 212
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a147" rel="contents">147</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a DocBlock</p>
+	
+		
+</div>
+<a name="defineSTATE_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DOCBLOCK_TEMPLATE</span> = 233
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a249" rel="contents">249</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the value in a &quot;static $var1 = x&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="defineSTATE_DOCKEYWORD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DOCKEYWORD</span> = 213
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a152" rel="contents">152</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a @tag in a DocBlock</p>
+	
+		
+</div>
+<a name="defineSTATE_DOCKEYWORD_EMAIL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_DOCKEYWORD_EMAIL</span> = 214
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a157" rel="contents">157</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an email in brackets in an @author tag of a DocBlock</p>
+	
+		
+</div>
+<a name="defineSTATE_END_CLASS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_END_CLASS</span> = 311
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a142" rel="contents">142</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used to tell Render that a class has been completely parsed, and to flush buffers</p>
+	
+		
+</div>
+<a name="defineSTATE_END_DOCBLOCK_TEMPLATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_END_DOCBLOCK_TEMPLATE</span> = 234
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a254" rel="contents">254</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the value in a &quot;static $var1 = x&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="defineSTATE_EOFQUOTE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_EOFQUOTE</span> = 222
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a194" rel="contents">194</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a string defined using Perl &lt;&lt;&lt;</p>
+	
+		
+</div>
+<a name="defineSTATE_ESCAPE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_ESCAPE</span> = 1000
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a42" rel="contents">42</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">used when a backslash is encountered in parsing a string or other escapable entity</p>
+	
+		
+</div>
+<a name="defineSTATE_FUNCTION"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_FUNCTION</span> = 217
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a172" rel="contents">172</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a Function or Method</p>
+	
+		
+</div>
+<a name="defineSTATE_FUNCTION_PARAMS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_FUNCTION_PARAMS</span> = 209
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a130" rel="contents">130</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the stuff in ( ) of a function definition</p>
+	
+		
+</div>
+<a name="defineSTATE_FUNCTION_PARAM_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_FUNCTION_PARAM_VAR</span> = 244
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a304" rel="contents">304</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a $param in a function definition</p>
+	
+		
+</div>
+<a name="defineSTATE_FUNC_GLOBAL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_FUNC_GLOBAL</span> = 230
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a234" rel="contents">234</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a &quot;global $var1, $var2;&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="defineSTATE_GLOBAL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_GLOBAL</span> = 228
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a224" rel="contents">224</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a global variable declaration</p>
+	
+		
+</div>
+<a name="defineSTATE_GLOBAL_VALUE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_GLOBAL_VALUE</span> = 229
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a229" rel="contents">229</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the default value in a global variable declaration</p>
+	
+		
+</div>
+<a name="defineSTATE_IMPLEMENTS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_IMPLEMENTS</span> = 240
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a284" rel="contents">284</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an implements clause</p>
+	
+		
+</div>
+<a name="defineSTATE_INCLUDE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_INCLUDE</span> = 223
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a199" rel="contents">199</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an include/require/include_once/include_once</p>
+	
+		
+</div>
+<a name="defineSTATE_INCLUDE_PARAMS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_INCLUDE_PARAMS</span> = 224
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a204" rel="contents">204</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the stuff in ( ) of a define statement</p>
+	
+		
+</div>
+<a name="defineSTATE_INCLUDE_PARAMS_PARENTHESIS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_INCLUDE_PARAMS_PARENTHESIS</span> = 225
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a209" rel="contents">209</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an inner parenthetical statement of an include/includeonce/require/requireonce( )</p>
+	
+		
+</div>
+<a name="defineSTATE_INLINE_DOCKEYWORD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_INLINE_DOCKEYWORD</span> = 219
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a182" rel="contents">182</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing an inline tag like { @link} in a DocBlock</p>
+	
+		
+</div>
+<a name="defineSTATE_LOGICBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_LOGICBLOCK</span> = 202
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a95" rel="contents">95</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a { } block</p>
+	
+		
+</div>
+<a name="defineSTATE_METHOD"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_METHOD</span> = 235
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a259" rel="contents">259</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a method using the HighlightParser</p>
+	
+		
+</div>
+<a name="defineSTATE_METHOD_LOGICBLOCK"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_METHOD_LOGICBLOCK</span> = 236
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a264" rel="contents">264</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the method body using the HighlightParser</p>
+	
+		
+</div>
+<a name="defineSTATE_NOEVENTS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_NOEVENTS</span> = 203
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a100" rel="contents">100</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">out of &lt; ? php tag</p>
+	
+		
+</div>
+<a name="defineSTATE_OUTPHP"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_OUTPHP</span> = 218
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a177" rel="contents">177</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently out of php code</p>
+	
+		
+</div>
+<a name="defineSTATE_PHPCODE"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_PHPCODE</span> = 206
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a115" rel="contents">115</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing php code</p>
+	
+		
+</div>
+<a name="defineSTATE_QUOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_QUOTE</span> = 201
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a90" rel="contents">90</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a quote</p>
+	
+		
+</div>
+<a name="defineSTATE_QUOTE_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_QUOTE_VAR</span> = 238
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a274" rel="contents">274</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a {$encapsed_var} using the HighlightParser</p>
+	
+		
+</div>
+<a name="defineSTATE_SINGLEQUOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_SINGLEQUOTE</span> = 210
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a135" rel="contents">135</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a string enclosed in single quotes (')</p>
+	
+		
+</div>
+<a name="defineSTATE_STATIC_VAR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_STATIC_VAR</span> = 231
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a239" rel="contents">239</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a &quot;static $var1, $var2;&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="defineSTATE_STATIC_VAR_VALUE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_STATIC_VAR_VALUE</span> = 232
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a244" rel="contents">244</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the value in a &quot;static $var1 = x&quot; declaration in a function</p>
+	
+		
+</div>
+<a name="defineSTATE_TAGS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_TAGS</span> = 227
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a219" rel="contents">219</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing the @tag block of a docblock</p>
+	
+		
+</div>
+<a name="defineSTATE_VAR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_VAR</span> = 216
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a167" rel="contents">167</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a Class variable</p>
+	
+		
+</div>
+<a name="defineSTATE_VAR_ARRAY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_VAR_ARRAY</span> = 242
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a294" rel="contents">294</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a variable value is an array</p>
+	
+		
+</div>
+<a name="defineSTATE_VAR_ARRAY_COMMENT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">STATE_VAR_ARRAY_COMMENT</span> = 243
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a299" rel="contents">299</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">currently parsing a comment in a variable array value</p>
+	
+		
+</div>
+<a name="defineT_ABSTRACT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_ABSTRACT</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a312" rel="contents">312</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_CONST"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_CONST</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a310" rel="contents">310</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_DOC_COMMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_DOC_COMMENT</span> = T_ML_COMMENT
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a325" rel="contents">325</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_FINAL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_FINAL</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a316" rel="contents">316</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_IMPLEMENTS"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_IMPLEMENTS</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a317" rel="contents">317</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_INTERFACE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_INTERFACE</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a308" rel="contents">308</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_ML_COMMENT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_ML_COMMENT</span> = T_COMMENT
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a321" rel="contents">321</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_PRIVATE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_PRIVATE</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a313" rel="contents">313</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_PROTECTED"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_PROTECTED</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a315" rel="contents">315</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineT_PUBLIC"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<img src="images/Constant.png" />
+		<span class="const-title">
+			<span class="const-name">T_PUBLIC</span> = 'foo'
+			(line <span class="line-number"><a href="__filesource/fsource_phpDocumentor_Parsers_phpDocumentorParser.inc.html#a314" rel="contents">314</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+            </div>
+        </div>
+            
+            
+    </div>

@@ -1,0 +1,77 @@
+<div class='page_content'>
+        <h1>Source for file create_examples.php</h1>
+    <p>Documentation is available at <a rel="contents" href="phpDocumentor/_scripts---create_examples.php.html">create_examples.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-comm">//&nbsp;+------------------------------------------------------------------------+</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-comm">//&nbsp;|&nbsp;phpDocumentor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-comm">//&nbsp;+------------------------------------------------------------------------+</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-comm">//&nbsp;|&nbsp;Copyright&nbsp;(c)&nbsp;2000-2003&nbsp;Joshua&nbsp;Eichorn,&nbsp;Gregory&nbsp;Beaver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-comm">//&nbsp;|&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jeichorn@phpdoc.org,&nbsp;cellog@phpdoc.org&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-comm">//&nbsp;|&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.phpdoc.org&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-comm">//&nbsp;|&nbsp;Mirror&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://phpdocu.sourceforge.net/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-comm">//&nbsp;|&nbsp;PEAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://pear.php.net/package/PhpDocumentor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-comm">//&nbsp;+------------------------------------------------------------------------+</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-comm">//&nbsp;|&nbsp;This&nbsp;source&nbsp;file&nbsp;is&nbsp;subject&nbsp;to&nbsp;version&nbsp;3.00&nbsp;of&nbsp;the&nbsp;PHP&nbsp;License,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-comm">//&nbsp;|&nbsp;that&nbsp;is&nbsp;available&nbsp;at&nbsp;http://www.php.net/license/3_0.txt.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-comm">//&nbsp;|&nbsp;If&nbsp;you&nbsp;did&nbsp;not&nbsp;receive&nbsp;a&nbsp;copy&nbsp;of&nbsp;the&nbsp;PHP&nbsp;license&nbsp;and&nbsp;are&nbsp;unable&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-comm">//&nbsp;|&nbsp;obtain&nbsp;it&nbsp;through&nbsp;the&nbsp;world-wide-web,&nbsp;please&nbsp;send&nbsp;a&nbsp;note&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-comm">//&nbsp;|&nbsp;license@php.net&nbsp;so&nbsp;we&nbsp;can&nbsp;mail&nbsp;you&nbsp;a&nbsp;copy&nbsp;immediately.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-comm">//&nbsp;+------------------------------------------------------------------------+</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-comm">//</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-comm">//&nbsp;./phpdoc&nbsp;-d&nbsp;/home/jeichorn/phpdoc&nbsp;-dn&nbsp;phpDocumentor&nbsp;-ti&nbsp;&quot;phpDocumentor&nbsp;generated&nbsp;docs&quot;&nbsp;-td&nbsp;templates/DOM/l0l33t&nbsp;-t&nbsp;/tmp/phpdoc_DOM_l0l33t</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;This&nbsp;file&nbsp;creates&nbsp;example&nbsp;documentation&nbsp;output&nbsp;of&nbsp;all&nbsp;templates.</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;phpDocumentor</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">*&nbsp;Directory&nbsp;the&nbsp;output&nbsp;should&nbsp;go&nbsp;to.</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">*&nbsp;Change&nbsp;this&nbsp;variable&nbsp;to&nbsp;an&nbsp;output&nbsp;directory&nbsp;on&nbsp;your&nbsp;computer</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-var">$output_directory&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-var">$output_directory&nbsp;</span>=&nbsp;<span class="src-str">&quot;/tmp&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">*&nbsp;default&nbsp;package&nbsp;name,&nbsp;used&nbsp;to&nbsp;change&nbsp;all&nbsp;non-included&nbsp;files&nbsp;to&nbsp;this&nbsp;package</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-var">$base_package&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-var">$base_package&nbsp;</span>=&nbsp;<span class="src-str">&quot;phpDocumentor&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">*&nbsp;Title&nbsp;of&nbsp;the&nbsp;generated&nbsp;documentation</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-var">$title&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-var">$title&nbsp;</span>=&nbsp;<span class="src-str">&quot;phpDocumentor&nbsp;Generated&nbsp;Documentation&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">*&nbsp;location&nbsp;of&nbsp;the&nbsp;files&nbsp;to&nbsp;parse.&nbsp;&nbsp;Change&nbsp;to&nbsp;a&nbsp;location&nbsp;on&nbsp;your&nbsp;computer.</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">*&nbsp;Example:</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">*&nbsp;&lt;code&gt;</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">*&nbsp;$parse_directory&nbsp;=&nbsp;&quot;/home/jeichorn/phpdoc&quot;;</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">*&nbsp;&lt;/code&gt;</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-var">$parse_directory&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a48"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-var">$parse_directory&nbsp;</span>=&nbsp;<span class="src-str">&quot;/you-MUST/change-me/to-fit/your-environment&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">*&nbsp;directories&nbsp;to&nbsp;output&nbsp;examples&nbsp;into.</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc">&nbsp;&nbsp;&nbsp;</span><span class="src-doc-var">$output&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-var">$output&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_default'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:default'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_l0l33t'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:l0l33t'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_phpdoc_de'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:phpdoc.de'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_DOM_default'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:DOM/default'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_DOM_l0l33t'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:DOM/l0l33t'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_DOM_phpdoc_de'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:default:DOM/phpdoc.de'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_smarty_default'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'HTML:Smarty:default'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_pdf_default'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'PDF:default:default'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$output_directory</span>.<span class="src-str">'/docs/phpdoc_chm_default'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>=&gt;&nbsp;<span class="src-str">'CHM:default:default'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$output&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$output&nbsp;</span>=&gt;&nbsp;<span class="src-var">$template</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/passthru" rel="contents">passthru</a><span class="src-sym">(</span><span class="src-str">&quot;</span><span class="src-str">./phpdoc&nbsp;-d&nbsp;/home/jeichorn/phpdoc&nbsp;-dn&nbsp;<span class="src-var">$base_package</span>&nbsp;-ti&nbsp;\&quot;<span class="src-var">$title</span>\&quot;&nbsp;-td&nbsp;<span class="src-var">$template</span>&nbsp;-t&nbsp;<span class="src-var">$output</span></span><span class="src-str">&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-sym">}</span></div></li>
+</ol>
+    </div>
+</div>

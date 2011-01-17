@@ -1,0 +1,10 @@
+.root li { padding: 3px 0 2px 20px; }
+.project { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/folder.png) 0 2px no-repeat; }
+.package { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/package.png) 0 2px no-repeat; }
+.subpackage { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/package.png) 0 2px no-repeat; }
+.classes { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/class.gif) 0 2px no-repeat; }
+.class { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/class.gif) 0 2px no-repeat; }
+.files { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/file.png) 0 2px no-repeat; }
+.file { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/file.png) 0 2px no-repeat; }
+.todo { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/todo.png) 0 2px no-repeat; }
+.errors { margin-left:-6px; padding: 1px 0 1px 20px; background: url(../images/errors.png) 0 2px no-repeat; }

@@ -1,0 +1,33 @@
+<div class='page_content'>
+        <h1>Source for file bug-quote_new_parser.php</h1>
+    <p>Documentation is available at <a rel="contents" href="tests/_Documentation---tests---bug-quote_new_parser.php.html">bug-quote_new_parser.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;tokenizer&nbsp;splits&nbsp;up&nbsp;strings&nbsp;that&nbsp;have&nbsp;inline&nbsp;variables</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;and&nbsp;will&nbsp;fool&nbsp;the&nbsp;DEFINE_PARAMS_PARENTHESIS&nbsp;handler&nbsp;here</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a9"></a><a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'bqnp_tester'</span><span class="src-sym">,</span><span class="src-str">&quot;</span><span class="src-str">testing&nbsp;this&nbsp;<span class="src-var">$parser</span>(<span class="src-var">$me</span>&nbsp;thingo\&quot;</span><span class="src-str">&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;tokenizer&nbsp;splits&nbsp;up&nbsp;strings&nbsp;that&nbsp;have&nbsp;inline&nbsp;variables</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;and&nbsp;will&nbsp;fool&nbsp;the&nbsp;GLOBAL_VALUE&nbsp;handler&nbsp;here</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$bqnp_tester&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-var">$bqnp_tester&nbsp;</span>=&nbsp;<span class="src-str">&quot;</span><span class="src-str">testing&nbsp;this&nbsp;<span class="src-var">$parser</span>;<span class="src-var">$me</span>&nbsp;thingo\&quot;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;The&nbsp;tokenizer&nbsp;splits&nbsp;up&nbsp;strings&nbsp;that&nbsp;have&nbsp;inline&nbsp;variables</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;and&nbsp;will&nbsp;fool&nbsp;the&nbsp;STATICVAR&nbsp;handler&nbsp;here</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@staticvar&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-key">function&nbsp;</span><a rel="contents" href="tests/_Documentation---tests---bug-quote_new_parser.php.html#functionbqnp_testie">bqnp_testie</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">static&nbsp;</span><span class="src-var">$test&nbsp;</span>=&nbsp;<span class="src-str">&quot;</span><span class="src-str">testing&nbsp;this&nbsp;<span class="src-var">$parser</span>;<span class="src-var">$me</span>&nbsp;thingo\&quot;</span><span class="src-str">&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>

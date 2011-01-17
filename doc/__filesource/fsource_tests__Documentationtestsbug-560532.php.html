@@ -1,0 +1,161 @@
+<div class='page_content'>
+        <h1>Source for file Config</h1>
+    <p>Documentation is available at <a rel="contents" href="tests/_Documentation---tests---bug-560532.php.html">Config</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?</span></div></li>
+<li><div class="src-line"><a name="a2"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Config&nbsp;file&nbsp;for&nbsp;MLib</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;File&nbsp;includes&nbsp;all&nbsp;of&nbsp;the&nbsp;static&nbsp;variables&nbsp;that&nbsp;controls</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;the&nbsp;default&nbsp;behavior&nbsp;of&nbsp;MLib.</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;0.1</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLib</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@name</span><span class="src-doc">&nbsp;Config</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@access</span><span class="src-doc">&nbsp;public</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a16"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a17"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;MLib&nbsp;include&nbsp;path</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;&nbsp;The&nbsp;absolute&nbsp;path&nbsp;to&nbsp;the&nbsp;directory&nbsp;where&nbsp;MLib&nbsp;resides.</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a23"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a24"></a><a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_INCLUDE_PATH'</span><span class="src-sym">,</span><span class="src-str">'/home/jstump/public_html/v3/includes'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a26"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Default&nbsp;log&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;The&nbsp;log&nbsp;file&nbsp;where&nbsp;you&nbsp;wish&nbsp;all&nbsp;class&nbsp;errors&nbsp;to&nbsp;be</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">written&nbsp;to.&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;&nbsp;Must&nbsp;be&nbsp;writable&nbsp;by&nbsp;the&nbsp;webserver.</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLIB_USE_SYSLOG</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;&nbsp;<a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_LOG_FILE'</span><span class="src-sym">,</span><span class="src-str">'/tmp/mlib.log'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Use&nbsp;syslog</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;If&nbsp;set&nbsp;to&nbsp;true&nbsp;MLib&nbsp;will&nbsp;send&nbsp;errors&nbsp;to&nbsp;syslog&nbsp;instead&nbsp;of</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;the&nbsp;file&nbsp;defined&nbsp;in&nbsp;MLIB_LOG_FILE</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLIB_LOG_FILE</span></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;<a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_USE_SYSLOG'</span><span class="src-sym">,</span><span class="src-id">false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Syslog&nbsp;priority</span></div></li>
+<li><div class="src-line"><a name="a51"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;The&nbsp;PHP&nbsp;function&nbsp;syslog&nbsp;takes&nbsp;a&nbsp;priority&nbsp;as&nbsp;a&nbsp;parameter.</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">If&nbsp;you</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;do&nbsp;not&nbsp;know&nbsp;what&nbsp;this&nbsp;means&nbsp;do&nbsp;NOT&nbsp;change&nbsp;this&nbsp;variable.</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLIB_USE_SYSLOG</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://www.php.net/manual/en/function.syslog.php</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;<a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_SYSLOG_PRIORITY'</span><span class="src-sym">,</span><span class="src-id">LOG_WARNING</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;<span class="src-doc">/**&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Template&nbsp;path</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;MLib&nbsp;comes&nbsp;with&nbsp;a&nbsp;template&nbsp;class&nbsp;that&nbsp;lets&nbsp;you&nbsp;separate&nbsp;your</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;code&nbsp;from&nbsp;your&nbsp;HTML.&nbsp;This&nbsp;is&nbsp;the&nbsp;path&nbsp;where&nbsp;the&nbsp;template</span></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-doc">files</span></div></li>
+<li><div class="src-line"><a name="a68"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;reside.</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Template,&nbsp;MLIB_INCLUDE_PATH</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a73"></a>&nbsp;&nbsp;<a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_TEMPLATE_PATH'</span><span class="src-sym">,</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/templates'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a74"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a75"></a>&nbsp;&nbsp;<span class="src-doc">/**&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Global&nbsp;debugging</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;By&nbsp;turning&nbsp;on&nbsp;global&nbsp;debugging&nbsp;you&nbsp;enable&nbsp;debugging&nbsp;in&nbsp;ALL</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;classes&nbsp;derived&nbsp;from&nbsp;MLib&nbsp;on&nbsp;ALL&nbsp;pages.&nbsp;BE&nbsp;CAREFUL&nbsp;SETTING</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;THIS&nbsp;TO&nbsp;TRUE!!</span></div></li>
+<li><div class="src-line"><a name="a81"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a83"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLib,&nbsp;MLIB::$debug,&nbsp;MLib::MLib()</span></div></li>
+<li><div class="src-line"><a name="a84"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;&nbsp;<a href="http://www.php.net/define" rel="contents">define</a><span class="src-sym">(</span><span class="src-str">'MLIB_GLOBAL_DEBUG'</span><span class="src-sym">,</span><span class="src-id">false</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a87"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Global&nbsp;DSN&nbsp;to&nbsp;be&nbsp;used&nbsp;by&nbsp;classes</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;The&nbsp;DSN&nbsp;to&nbsp;be&nbsp;used.&nbsp;Please&nbsp;see&nbsp;the&nbsp;PEAR&nbsp;documentation</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">for&nbsp;more</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;information.</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@global&nbsp;</span><span class="src-doc-type">array&nbsp;</span><span class="src-doc-var">$_MLIB_GLOBAL_DSN&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a95"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Joe&nbsp;Stump&nbsp;&lt;joe@joestump.net&gt;</span></div></li>
+<li><div class="src-line"><a name="a96"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;TemplateDB</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://pear.php.net</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a99"></a>&nbsp;&nbsp;<span class="src-var">$_MLIB_GLOBAL_DSN&nbsp;</span>=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'db_type'</span>=&gt;&nbsp;<span class="src-str">'mysql'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'username'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'nobody'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'password'&nbsp;</span>=&gt;&nbsp;<span class="src-str">''</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'database'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'miester'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a103"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'server'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'localhost'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a104"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a105"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;MLib&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a107"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;MLib</span></div></li>
+<li><div class="src-line"><a name="a108"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/MLib.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a110"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a111"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a112"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Debug&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a113"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Debug</span></div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a115"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Debug.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a118"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;DSN&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;DSN</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a121"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/DSN.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a122"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a123"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Table&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Table</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a127"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Table.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a130"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;Template&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Template</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a133"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Template.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a134"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a135"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;TemplateFile&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;TemplateFile</span></div></li>
+<li><div class="src-line"><a name="a138"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a139"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Template/TemplateFile.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a142"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;TemplateDB&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a143"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;TemplateDB</span></div></li>
+<li><div class="src-line"><a name="a144"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a145"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Template/TemplateDB.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a146"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a147"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a148"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;TemplateVar&nbsp;include&nbsp;file</span></div></li>
+<li><div class="src-line"><a name="a149"></a><span class="src-doc">&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;TemplateVar</span></div></li>
+<li><div class="src-line"><a name="a150"></a><span class="src-doc">&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a151"></a>&nbsp;&nbsp;<span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-id">MLIB_INCLUDE_PATH</span>.<span class="src-str">'/Template/TemplateVar.php'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a152"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a153"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a154"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>

@@ -1,0 +1,257 @@
+<div class='page_content'>
+        <h1>Source for file bug-553560.php</h1>
+    <p>Documentation is available at <a rel="contents" href="tests/_Documentation---tests---bug-553560.php.html">bug-553560.php</a></p>
+    <div class="src-code">
+    <ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a3"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">*&nbsp;Base&nbsp;class&nbsp;for&nbsp;all&nbsp;output&nbsp;converters.</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">*&nbsp;A&nbsp;Converter&nbsp;takes&nbsp;output&nbsp;from&nbsp;the&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;Parser}</span><span class="src-doc">&nbsp;and&nbsp;converts&nbsp;it&nbsp;to&nbsp;template-friendly&nbsp;output.&nbsp;&nbsp;A&nbsp;converter&nbsp;for&nbsp;the&nbsp;standard&nbsp;phpDocumentor</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">*&nbsp;template,&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;HTMLConverter}</span><span class="src-doc">,&nbsp;is&nbsp;provided&nbsp;with&nbsp;this&nbsp;release.&nbsp;&nbsp;Future&nbsp;releases&nbsp;will&nbsp;have&nbsp;support&nbsp;for&nbsp;other&nbsp;formats&nbsp;and&nbsp;templates,&nbsp;including</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">*&nbsp;DocBook,&nbsp;XML,&nbsp;and&nbsp;possibly&nbsp;other&nbsp;HTML&nbsp;templates.&nbsp;&nbsp;The&nbsp;converter&nbsp;takes&nbsp;output&nbsp;directly&nbsp;from&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender}</span><span class="src-doc">&nbsp;and&nbsp;using&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;walk()}</span><span class="src-doc">&nbsp;it</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">*&nbsp;&quot;walks&quot;&nbsp;over&nbsp;an&nbsp;array&nbsp;of&nbsp;phpDocumentor&nbsp;elements,&nbsp;as&nbsp;represented&nbsp;by&nbsp;descendants&nbsp;of&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;parserElement}</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">*&nbsp;a&nbsp;converter&nbsp;must&nbsp;define&nbsp;the&nbsp;abstract&nbsp;function&nbsp;Convert&nbsp;(an&nbsp;example&nbsp;is&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;HTMLConverter::Convert()}</span><span class="src-doc">),&nbsp;a&nbsp;function&nbsp;that&nbsp;takes&nbsp;a&nbsp;passed&nbsp;object</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">*&nbsp;and&nbsp;uses&nbsp;it&nbsp;to&nbsp;generate&nbsp;structures&nbsp;for&nbsp;an&nbsp;output&nbsp;template,&nbsp;or&nbsp;directly&nbsp;generates&nbsp;output.&nbsp;&nbsp;Since&nbsp;all&nbsp;elements&nbsp;have&nbsp;their&nbsp;DocBlocks&nbsp;linked</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">*&nbsp;directly,&nbsp;this&nbsp;allows&nbsp;for&nbsp;more&nbsp;logical&nbsp;parsing&nbsp;than&nbsp;earlier&nbsp;versions&nbsp;of&nbsp;phpDocumentor.</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">*</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">*&nbsp;A&nbsp;Converter&nbsp;is&nbsp;passed&nbsp;several&nbsp;data&nbsp;structures&nbsp;in&nbsp;its&nbsp;constructor,&nbsp;all&nbsp;of&nbsp;which&nbsp;are&nbsp;optional&nbsp;in&nbsp;output&nbsp;and&nbsp;may&nbsp;be&nbsp;handled&nbsp;in&nbsp;any&nbsp;way</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">*&nbsp;the&nbsp;converter&nbsp;would&nbsp;like.&nbsp;&nbsp;These&nbsp;structures&nbsp;are&nbsp;arrays:</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">*&nbsp;&lt;ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;methods&nbsp;by&nbsp;class&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$methods}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;variables&nbsp;by&nbsp;class&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$vars}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;links&nbsp;to&nbsp;documented&nbsp;elements&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$links}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;class&nbsp;parents&nbsp;by&nbsp;name&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$classtree}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;class&nbsp;packages&nbsp;by&nbsp;classname&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$classpackages}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;packages&nbsp;to&nbsp;document&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$packageoutput}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;extended&nbsp;classes&nbsp;by&nbsp;parent&nbsp;classname&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$class_children}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;all&nbsp;documented&nbsp;elements&nbsp;by&nbsp;name&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$elements}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;array&nbsp;of&nbsp;all&nbsp;documented&nbsp;elements&nbsp;by&nbsp;name,&nbsp;split&nbsp;by&nbsp;package&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$pkg_elements}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;boolean&nbsp;option,&nbsp;set&nbsp;to&nbsp;true&nbsp;to&nbsp;parse&nbsp;all&nbsp;elements&nbsp;marked&nbsp;@access&nbsp;private&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$parsePrivate}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">*&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;boolean&nbsp;option,&nbsp;set&nbsp;to&nbsp;true&nbsp;to&nbsp;stop&nbsp;informative&nbsp;output&nbsp;while&nbsp;parsing&nbsp;(good&nbsp;for&nbsp;cron&nbsp;jobs)&nbsp;(see&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;NewRender::$quietMode}</span><span class="src-doc">)&lt;/li&gt;</span></div></li>
+<li><div class="src-line"><a name="a29"></a><span class="src-doc">*&nbsp;&lt;/ul&gt;</span></div></li>
+<li><div class="src-line"><a name="a30"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a31"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@abstract</span></div></li>
+<li><div class="src-line"><a name="a32"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;parserDocBlock,&nbsp;parserInclude,&nbsp;parserPage,&nbsp;parserClass,&nbsp;parserDefine,&nbsp;parserFunction,&nbsp;parserMethod,&nbsp;parserVar</span></div></li>
+<li><div class="src-line"><a name="a33"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-key">class&nbsp;</span><a rel="contents" href="tests/iConverter.html">iConverter</a></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a36"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a37"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a rel="contents" href="tests/iConverter.html#methodwalk">walk</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a39"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a41"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a43"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a44"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a45"></a><span class="src-key">class&nbsp;</span><a rel="contents" href="tests/iParser.html">iParser</a></div></li>
+<li><div class="src-line"><a name="a46"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a47"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a49"></a><span class="src-key">class&nbsp;</span><a rel="contents" href="tests/iHTMLConverter.html">iHTMLConverter</a>&nbsp;<span class="src-key">extends&nbsp;</span><a rel="contents" href="tests/iConverter.html">iConverter</a></div></li>
+<li><div class="src-line"><a name="a50"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a rel="contents" href="tests/iHTMLConverter.html#methodConvert">Convert</a><span class="src-sym">(</span><span class="src-sym">)</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-key">class&nbsp;</span><a rel="contents" href="tests/iparserElement.html">iparserElement</a></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a63"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-doc">*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;tests</span></div></li>
+<li><div class="src-line"><a name="a65"></a><span class="src-doc">*/</span></div></li>
+<li><div class="src-line"><a name="a66"></a><span class="src-key">class&nbsp;</span><a rel="contents" href="tests/iNewRender.html">iNewRender</a></div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a69"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array&nbsp;of&nbsp;methods&nbsp;by&nbsp;package,&nbsp;subpackage&nbsp;and&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a70"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;format:</span></div></li>
+<li><div class="src-line"><a name="a71"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(packagename&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a72"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(subpackagename&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(classname&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(methodname1&nbsp;=&gt;&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;parserMethod}</span><span class="src-doc">&nbsp;class,</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;methodname2&nbsp;=&gt;&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;parserMethod}</span><span class="src-doc">&nbsp;class,...)</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a81"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Converter</span></div></li>
+<li><div class="src-line"><a name="a82"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$methods">$methods</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a86"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array&nbsp;of&nbsp;class&nbsp;variables&nbsp;by&nbsp;package,&nbsp;subpackage&nbsp;and&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;format:</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(packagename&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(subpackagename&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(classname&nbsp;=&gt;</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(variablename1&nbsp;=&gt;&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;parserMethod}</span><span class="src-doc">&nbsp;class,</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variablename2&nbsp;=&gt;&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;parserMethod}</span><span class="src-doc">&nbsp;class,...)</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a94"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a95"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a96"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Converter</span></div></li>
+<li><div class="src-line"><a name="a99"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a100"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$vars">$vars</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a101"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a102"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a103"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;set&nbsp;in&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;phpdoc.inc}</span><span class="src-doc">&nbsp;to&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;parserprivate&nbsp;commandline&nbsp;option.</span></div></li>
+<li><div class="src-line"><a name="a104"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;If&nbsp;this&nbsp;option&nbsp;is&nbsp;true,&nbsp;elements&nbsp;with&nbsp;an&nbsp;@access&nbsp;private&nbsp;tag&nbsp;will&nbsp;be&nbsp;parsed&nbsp;and&nbsp;displayed</span></div></li>
+<li><div class="src-line"><a name="a105"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">bool&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a106"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a107"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$parsePrivate">$parsePrivate</a>&nbsp;=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a108"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a109"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a110"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;this&nbsp;variable&nbsp;is&nbsp;used&nbsp;to&nbsp;prevent&nbsp;parsing&nbsp;of&nbsp;private&nbsp;elements&nbsp;if&nbsp;$parsePrivate&nbsp;is&nbsp;false.</span></div></li>
+<li><div class="src-line"><a name="a111"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;it&nbsp;is&nbsp;also&nbsp;used&nbsp;by&nbsp;the&nbsp;packageoutput&nbsp;setting&nbsp;to&nbsp;prevent&nbsp;parsing&nbsp;of&nbsp;elements&nbsp;that&nbsp;aren't&nbsp;in&nbsp;the</span></div></li>
+<li><div class="src-line"><a name="a112"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;desired&nbsp;output&nbsp;packages</span></div></li>
+<li><div class="src-line"><a name="a113"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;$packageoutput</span></div></li>
+<li><div class="src-line"><a name="a114"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;$parsePrivate</span></div></li>
+<li><div class="src-line"><a name="a115"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a116"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$private_class">$private_class</a>&nbsp;=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a117"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a118"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a119"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;the&nbsp;workhorse&nbsp;of&nbsp;linking.</span></div></li>
+<li><div class="src-line"><a name="a120"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;This&nbsp;array&nbsp;is&nbsp;an&nbsp;array&nbsp;of&nbsp;link&nbsp;objects&nbsp;of&nbsp;format:</span></div></li>
+<li><div class="src-line"><a name="a121"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;[package][subpackage][eltype][elname]&nbsp;=&nbsp;descendant&nbsp;of&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;abstractLink}</span></div></li>
+<li><div class="src-line"><a name="a122"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;eltype&nbsp;can&nbsp;be&nbsp;page|include|function|define|class|method|var</span></div></li>
+<li><div class="src-line"><a name="a123"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;if&nbsp;eltype&nbsp;is&nbsp;method&nbsp;or&nbsp;var,&nbsp;the&nbsp;array&nbsp;format&nbsp;is:</span></div></li>
+<li><div class="src-line"><a name="a124"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;[package][subpackage][eltype][class][elname]</span></div></li>
+<li><div class="src-line"><a name="a125"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a126"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;functionLink,&nbsp;pageLink,&nbsp;classLink,&nbsp;defineLink,&nbsp;methodLink,&nbsp;varLink</span></div></li>
+<li><div class="src-line"><a name="a127"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a128"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$links">$links</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a129"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a130"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a131"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;a&nbsp;tree&nbsp;of&nbsp;class&nbsp;inheritance&nbsp;by&nbsp;name.</span></div></li>
+<li><div class="src-line"><a name="a132"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;format:</span></div></li>
+<li><div class="src-line"><a name="a133"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(childname&nbsp;=&gt;&nbsp;parentname,</span></div></li>
+<li><div class="src-line"><a name="a134"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childname1&nbsp;=&gt;&nbsp;parentname1,</span></div></li>
+<li><div class="src-line"><a name="a135"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rootname&nbsp;=&gt;&nbsp;0,&nbsp;...</span></div></li>
+<li><div class="src-line"><a name="a136"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a137"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a138"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Converter::generateClassTreeFromClass()</span></div></li>
+<li><div class="src-line"><a name="a139"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a140"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$classtree">$classtree</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a141"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a142"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a143"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;used&nbsp;in&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;Converter::getClassPackage()}</span><span class="src-doc">&nbsp;to&nbsp;inherit&nbsp;package&nbsp;from&nbsp;parent&nbsp;classes.</span></div></li>
+<li><div class="src-line"><a name="a144"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;format:</span></div></li>
+<li><div class="src-line"><a name="a145"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(classname&nbsp;=&gt;&nbsp;array(array(package,subpackage),</span></div></li>
+<li><div class="src-line"><a name="a146"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(package1,subpackage1),....</span></div></li>
+<li><div class="src-line"><a name="a147"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a148"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a149"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;If&nbsp;a&nbsp;name&nbsp;conflict&nbsp;exists&nbsp;between&nbsp;two&nbsp;packages,&nbsp;automatic&nbsp;inheritance&nbsp;will&nbsp;not&nbsp;work,&nbsp;and&nbsp;the&nbsp;packages&nbsp;will&nbsp;need</span></div></li>
+<li><div class="src-line"><a name="a150"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;to&nbsp;be&nbsp;documented&nbsp;separately.</span></div></li>
+<li><div class="src-line"><a name="a151"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a152"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a153"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$classpackages">$classpackages</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a154"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a155"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a156"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;used&nbsp;to&nbsp;set&nbsp;the&nbsp;output&nbsp;directory</span></div></li>
+<li><div class="src-line"><a name="a157"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;setTargetDir()</span></div></li>
+<li><div class="src-line"><a name="a158"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a159"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$targetDir">$targetDir</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a160"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a161"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a162"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array&nbsp;of&nbsp;class&nbsp;inheritance&nbsp;indexed&nbsp;by&nbsp;parent&nbsp;class&nbsp;and&nbsp;package</span></div></li>
+<li><div class="src-line"><a name="a163"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a164"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Format:</span></div></li>
+<li><div class="src-line"><a name="a165"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(Packagename&nbsp;=&gt;&nbsp;array(ParentClassname1&nbsp;=&gt;&nbsp;array(Child1name,Child2name),</span></div></li>
+<li><div class="src-line"><a name="a166"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ParentClassname2&nbsp;=&gt;&nbsp;array(Child1name,Child2name),...</span></div></li>
+<li><div class="src-line"><a name="a167"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a168"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a169"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Converter::getRootTree()</span></div></li>
+<li><div class="src-line"><a name="a170"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a171"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a172"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a173"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a174"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;An&nbsp;array&nbsp;of&nbsp;extended&nbsp;classes&nbsp;by&nbsp;package&nbsp;and&nbsp;parent&nbsp;class</span></div></li>
+<li><div class="src-line"><a name="a175"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Format:</span></div></li>
+<li><div class="src-line"><a name="a176"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(packagename&nbsp;=&gt;&nbsp;array(parentclass&nbsp;=&gt;&nbsp;array(childclassname1,</span></div></li>
+<li><div class="src-line"><a name="a177"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;childclassname2,...</span></div></li>
+<li><div class="src-line"><a name="a178"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a179"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a180"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span></div></li>
+<li><div class="src-line"><a name="a181"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">array&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a182"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a183"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$class_children">$class_children</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a184"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a185"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$elements">$elements</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a186"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a187"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$pkg_elements">$pkg_elements</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a188"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a189"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$pages">$pages</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a190"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a191"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a192"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array&nbsp;of&nbsp;packages&nbsp;to&nbsp;parser&nbsp;and&nbsp;output&nbsp;documentation&nbsp;for,&nbsp;if&nbsp;not&nbsp;all&nbsp;packages&nbsp;should&nbsp;be&nbsp;documented</span></div></li>
+<li><div class="src-line"><a name="a193"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Format:</span></div></li>
+<li><div class="src-line"><a name="a194"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;array(package1,package2,...)</span></div></li>
+<li><div class="src-line"><a name="a195"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;or&nbsp;false&nbsp;if&nbsp;not&nbsp;set</span></div></li>
+<li><div class="src-line"><a name="a196"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;Use&nbsp;this&nbsp;option&nbsp;to&nbsp;limit&nbsp;output&nbsp;similar&nbsp;to&nbsp;ignoring&nbsp;files.&nbsp;&nbsp;If&nbsp;you&nbsp;have&nbsp;some&nbsp;temporary&nbsp;files&nbsp;that&nbsp;you&nbsp;don't&nbsp;want&nbsp;to&nbsp;specify&nbsp;by&nbsp;name</span></div></li>
+<li><div class="src-line"><a name="a197"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;but&nbsp;don't&nbsp;want&nbsp;included&nbsp;in&nbsp;output,&nbsp;set&nbsp;a&nbsp;package&nbsp;name&nbsp;for&nbsp;all&nbsp;the&nbsp;elements&nbsp;in&nbsp;your&nbsp;project,&nbsp;and&nbsp;set&nbsp;packageoutput&nbsp;to&nbsp;that&nbsp;name.</span></div></li>
+<li><div class="src-line"><a name="a198"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;the&nbsp;default&nbsp;package&nbsp;will&nbsp;be&nbsp;ignored.&nbsp;&nbsp;Parsing&nbsp;speed&nbsp;does&nbsp;not&nbsp;improve.&nbsp;&nbsp;If&nbsp;you&nbsp;want&nbsp;to&nbsp;ignore&nbsp;files&nbsp;for&nbsp;speed&nbsp;reasons,&nbsp;use&nbsp;the&nbsp;ignore</span></div></li>
+<li><div class="src-line"><a name="a199"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;command-line&nbsp;option</span></div></li>
+<li><div class="src-line"><a name="a200"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;Io</span></div></li>
+<li><div class="src-line"><a name="a201"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">mixed&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a202"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a203"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$packageoutput">$packageoutput</a>&nbsp;=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a204"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a205"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a206"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;the&nbsp;functions&nbsp;which&nbsp;handle&nbsp;output&nbsp;from&nbsp;the&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;Parser}</span></div></li>
+<li><div class="src-line"><a name="a207"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;handleEvent(),&nbsp;handleDocBlock(),&nbsp;handlePage(),&nbsp;handleClass(),&nbsp;handleDefine(),&nbsp;handleFunction(),&nbsp;handleMethod(),&nbsp;handleVar(),</span></div></li>
+<li><div class="src-line"><a name="a208"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handlePackagePage(),&nbsp;handleInclude()</span></div></li>
+<li><div class="src-line"><a name="a209"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a210"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$event_handlers">$event_handlers</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a211"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'docblock'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleDocBlock'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a212"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'page'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handlePage'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a213"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'class'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleClass'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a214"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'define'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleDefine'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a215"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'function'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleFunction'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a216"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'method'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleMethod'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a217"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'var'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleVar'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a218"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'packagepage'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handlePackagePage'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a219"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'include'&nbsp;</span>=&gt;&nbsp;<span class="src-str">'handleInclude'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line"><a name="a220"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a221"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a222"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a223"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;data&nbsp;contains&nbsp;parsed&nbsp;structures&nbsp;for&nbsp;the&nbsp;current&nbsp;page&nbsp;being&nbsp;parsed</span></div></li>
+<li><div class="src-line"><a name="a224"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">parserData&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a225"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;parserData</span></div></li>
+<li><div class="src-line"><a name="a226"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a227"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$data">$data</a><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a228"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a229"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a230"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;set&nbsp;to&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;package&nbsp;of&nbsp;the&nbsp;current&nbsp;class&nbsp;being&nbsp;parsed</span></div></li>
+<li><div class="src-line"><a name="a231"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a232"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a233"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$classpackage">$classpackage</a>&nbsp;=&nbsp;<span class="src-str">'default'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a234"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a235"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a236"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;set&nbsp;to&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;subpackage&nbsp;of&nbsp;the&nbsp;current&nbsp;class&nbsp;being&nbsp;parsed</span></div></li>
+<li><div class="src-line"><a name="a237"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">string&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a238"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a239"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$classsubpackage">$classsubpackage</a>&nbsp;=&nbsp;<span class="src-str">''</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a240"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a241"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a242"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;set&nbsp;in&nbsp;</span><span class="src-doc-inlinetag">{@link&nbsp;phpdoc.inc}</span><span class="src-doc">&nbsp;to&nbsp;the&nbsp;value&nbsp;of&nbsp;the&nbsp;quitemode&nbsp;commandline&nbsp;option.</span></div></li>
+<li><div class="src-line"><a name="a243"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;If&nbsp;this&nbsp;option&nbsp;is&nbsp;true,&nbsp;informative&nbsp;output&nbsp;while&nbsp;parsing&nbsp;will&nbsp;not&nbsp;be&nbsp;displayed&nbsp;(documentation&nbsp;is&nbsp;unaffected)</span></div></li>
+<li><div class="src-line"><a name="a244"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@var&nbsp;</span><span class="src-doc-type">bool&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a245"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a246"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a rel="contents" href="tests/iNewRender.html#var$quietMode">$quietMode</a>&nbsp;=&nbsp;<span class="src-id">false</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a247"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a248"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a249"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a250"></a><span class="src-php">?&gt;</span></div></li>
+</ol>
+    </div>
+</div>
