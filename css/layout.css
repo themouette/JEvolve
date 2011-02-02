@@ -1,0 +1,19 @@
+body {
+  margin-top: 1.0em;
+  font-family: "Helvetica,Arial,FreeSans";
+}
+
+header, section, footer {width:700px; margin:auto;}
+
+header {height: 100px;}
+  #forkme img {position: absolute; top: 0; right: 0; border: 0;}
+  nav ul {list-style: none;}
+    nav li { float: right; line-height:90px;}
+      .download { border: 0; width: 90px; }
+
+section#content {}
+  pre { background: #000; color: #fff; padding: 15px; margin: 0 15px; overflow: auto;}
+  
+footer {}
+  footer p{text-align:center; padding-top:30px; font-style: italic;}
+
